@@ -1,0 +1,27 @@
+		
+		$('.continue_b_r').click(function(){
+			var index3 = layer.open({
+				type:1,
+				area:["509px","303px"],
+				content:`	<div class="fail">
+		<div class="fail_t">
+			<p>创建失败</p>
+		</div>
+		<div class="fail_b">
+			<div class="fail_b_m"></div>
+		</div>
+	</div>`
+			})
+			})
+
+
+
+				
+				
+					<select class="select_option">
+						<option>高数</option>
+						<option>物理</option>
+						<option>英语</option>
+					</select>
+					
+			

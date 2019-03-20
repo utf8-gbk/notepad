@@ -1,0 +1,9 @@
+form-group
+form-control
+
+insert:type(checkbox¼Ólabel,radio)
+textarea
+select
+
+
+

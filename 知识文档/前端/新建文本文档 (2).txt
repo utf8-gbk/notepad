@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	<link rel="stylesheet" href="second.css" />
+	</head>
+	<body>
+		
+		<div class="top">
+			王小莴
+			<ul>
+				<li>oo</li>
+				<li>oo</li>
+				<li>oo</li>
+			</ul>
+		</div>
+		
+		
+	<div class="second">
+	<div class="s1">
+		<hr color="#A9A9A9" width="200px" size="3">
+		<font>王小窝</font>
+	    <hr color="#A9A9A9" width="200px" size="3">
+	    <font> I have a big big big dream<font><br/>
+	    <button style="color:black">了解一下</button>
+	</div>
+	
+	<div class="third">
+		
+	</div>
+	</div>
+	

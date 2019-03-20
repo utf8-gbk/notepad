@@ -1,0 +1,29 @@
+1.布局分析全体写div
+1.top                     id
+2.广告位
+3.header               id
+4.main                  id
+5.广告位
+6.footer                id
+其他用class
+
+2.加css样式到html
+
+3.样式布局
+*{
+	padding:0px;
+	margin:0px;
+}
+body
+{
+	font-family: "宋体";
+	font-size:12px;
+}
+li
+{
+	list-style: none;
+}
+a
+{
+	text-decoration: none;
+}

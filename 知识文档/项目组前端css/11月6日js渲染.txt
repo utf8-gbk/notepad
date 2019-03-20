@@ -1,0 +1,493 @@
+js中要区分大小写
+
+定义一个函数
+function 函数名()
+{
+       函数代码;
+}
+
+js输出内容的几种方法
+第一种:输出内容用""括起，直接输出""号内的内容。
+1. document.write("I love JavaScript！");
+第二种:通过变量，输出内容
+2.  var mystr="hello world!";
+     document.write(mystr); 
+第三种:输出多项内容，内容之间用+号连接。
+3. var mystr="hello";
+   document.write(mystr+"I love JavaScript");
+第四种:输出HTML标签，并起作用，标签使用""括起来。
+4. var mystr="hello";
+    document.write(mystr+"<br>");
+去除空格的两种方法
+document.write("<span style='white-space:pre;'>"+"1   3             3"+ "</span>");
+document.write("1111111111111111"+"&nbsp;&nbsp"+"1111");
+
+var a=confirm(str);弹出对话框(包括一个确定按钮和一个取消按钮)
+if(a==ture)
+else
+
+var b = prompt(str1,str2)
+str1: 要显示在消息对话框中的文本，不可修改
+str2：文本框中的内容，可以修改
+if(b >90)
+else
+
+window.open([URL], [窗口名称](_blank：在新窗口显示，_self：在当前窗口显示), [参数字符串])
+打开窗口要用户操作出现新窗口
+window.close 关闭窗口
+
+DOM
+元素节点
+文本节点
+属性节点
+
+改变html的文本
+Object.innerHTML
+
+改变html的样式
+Object.style.property=new style;
+
+document.getElementById(""); 单个对象
+document.getElementsByName("");   数组
+document.getElementsByTagName(""); 数组
+document.getElementsByClassName("");数组
+
+Object.属性 Object.getAttribute("属性") 第二种可以获取自定义的属性
+
+1. nodeName : 节点的名称
+1. 元素节点的 nodeName 与标签名相同
+2. 属性节点的 nodeName 是属性的名称
+3. 文本节点的 nodeName 永远是 #text
+4. 文档节点的 nodeName 永远是 #document
+2. nodeValue ：节点的值
+1. 元素节点的 nodeValue 是 undefined 或 null
+2. 文本节点的 nodeValue 是文本自身
+3. 属性节点的 nodeValue 是属性的值
+3. nodeType ：节点的类型
+  元素          1
+  属性          2
+  文本          3
+  注释          8
+  文档          9
+
+访问子节点
+elementNode.childNodes 数组
+空白算作文本节点
+
+访问父节点
+elementNode.parentNode 单个对象
+
+访问之后紧跟的兄弟节点
+nodeObject.nextSibling 单个对象
+
+访问之前紧跟的兄弟节点
+nodeObject.previousSibling   单个对象
+
+插入到当前节点的最后一个子节点中
+appendChild(newnode)
+
+insertBefore() 方法可在已有的子节点前插入一个新的子节点
+insertBefore(newnode,node)
+
+从子节点列表中删除某个节点
+nodeObject.removeChild(node)
+如果要删除所有子节点 
+for var i = 0 ; i< nodeObject.removeChild.length ;i++
+第一种会多次删除因为从开始删除节点后，后面的节点会重新排序
+for var i = nodeObject.removeChild.length-1;i>=0;i--
+
+实现子节点(对象)的替换replaceChild()
+node.replaceChild (newnode,oldnew ) 
+newnode : 必需，用于替换 oldnew 的对象。 
+oldnew : 必需，被 newnode 替换的对象。
+
+createElement()方法可创建元素节点。此方法可返回一个 Element 对象。
+document.createElement(tagName)
+
+获取body节点
+var main = document.body;
+
+创建文本节点
+document.createTextNode(data)
+
+日期对象 
+var a = date.getDate();        几号
+var b = date.getFullYear();   年份4位数
+var c = date.getYear();         年份3位数
+var d = date.getMonth();     月份0是1月，11是12月
+var e = date.getDay();          星期日0 星期五5
+var f = date.getHours();        小时数
+var g = date.getMinutes();    分钟数
+var h = date.getSeconds();    秒数
+get/setTime() 返回/设置时间，单位毫秒数，计算从 1970 年 1 月 1 日零时到日期对象所指的日期的毫秒数。
+date.setTime(date.getTime()+60*60*1000);
+
+
+前端攻城狮
+1.不加var全局变量
+2.在函数里局部变量，里面可以访问外面的，外面不能访问里面的
+3.数据类型：5+1
+undefined null boolean string number object function
+1undefined:当一个变量声明但未初始化时，就会被赋予undefined值
+2null:当一个变量是为了保存一个对象，但没办法立即初始化的时候，应该为之分配一个null值
+3boolean:
+其他数据类型向布尔值转换的规则
+空字符串：false
+number类型为0：false
+object类型为Null：false
+undefined类型：false
+4Number类型和string类型
+NaN与任何值都不相等，包括NAN本身
+5.Object
+Object类型具有任何属性和方法也同样存在于更具体的对象中
+
+数据类型转换
+Boolean();
+Boolean(0);false
+Boolean("");false
+Boolean(null);false
+Boolean(undefined);false
+parseInt();
+parseInt(""); NAN
+parseInt("123ab");123
+parseInt("0xA");10
+parseInt(10,8)8 把10进制的10转换为8进制的10
+var a = new Object();
+a.toString();
+"[object object]"
+String(null);
+"null"
+
+字符串对象
+stringObject.length 长度
+stringObject.charAt(index) 表示字符串中某个位置的数字
+stringObject.indexOf(substring, startpos) substring：规定需检索的字符串值 startpos：从第几位字符串开始检索
+stringObject.lastIndexOf 反向检索
+stringObject.split(separator,limit) separator:指定的地方分割 limit:分割的次数
+stringObject.substring(startPos,stopPos)  startPos:开始位置 stopPos:结束位置
+stringObject.substr(startPos,length) startPos:开始的位置 length:提取字符串的长度
+
+运算符
+!!:即Boolean()
+&&:短路操作（if-else） Boolean()&&(a=2)
+||：默认值（var a=b||1;)
+三元运算符：q?a:b;
+
+事件响应，网页交互
+事件是可以被 JavaScript 侦测到的行为
+onclick 鼠标单击事件:在网页上单击鼠标时，就会发生该事件
+onmouseover 鼠标移到一个对象时，就会发生该事件
+onmouseout 鼠标移开当前对象时，就会发生该事件
+onfocus 当网页中的对象获得焦点时，就会发生该事件
+onblur 当光标离开当前获得聚焦对象的时候，就会发生该事件
+onselect 当文本框或者文本域中的文字被选中时，就会发生该事件
+onchange 当改变文本框中的内容，就会发生该事件
+onload 事件会在页面加载完成后，立即发生
+
+Math对象
+Math 对象是一个固有的对象，无需创建它，直接把 Math 作为对象使用就可以调用其所有属性和方法。这是它与Date,String对象的区别。
+Math.ceil(x) 方法可对一个数进行向上取整。
+Math.floor(x) 方法可对一个数进行向下取整。
+Math.round(x) 方法可把一个数字四舍五入为最接近的整数。
+Math.random() 方法可返回介于 0 ~ 1（大于或等于 0 但小于 1 )之间的一个随机数。
+
+数组对象
+var  数组名= new Array();
+var 数组名 =new Array(n);
+var myArray = [2, 8, 6]; 
+arrayObject.concat(array1,array2,...,arrayN) 数组链接concat()    原数组未被修改
+arrayObject.join(分隔符)  join()方法用于把数组中的所有元素放入一个字符串。元素是通过指定的分隔符进行分隔的。
+arrayObject.reverse() reverse() 方法用于颠倒数组中元素的顺序。 原数组被修改
+arrayObject.slice(start,end) slice() 方法可从已有的数组中返回选定的元素。start开始，end之前 如果为负数则从最后开始向前算
+arrayObject.sort(方法函数) sort()方法使数组中的元素按照一定的顺序排列。
+arrayObject.splice(start,end) splice()方法对原数组有修改，删除分割出来的元素   arr.splice(1,1,'a','b');删除分割的元素还可以在原有位置添加元素
+注意: 该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下： 
+  若返回值<=-1，则表示 A 在排序后的序列中出现在 B 之前。
+  若返回值>-1 && <1，则表示 A 和 B 具有相同的排序顺序。
+  若返回值>=1，则表示 A 在排序后的序列中出现在 B 之后。
+
+计时器
+setInterval(函数,交互时间);函数不加()直接写名字
+clearInterval(id_of_setInterval)方法可取消由 setInterval() 设置的交互时间。
+id_of_setInterval：由 setInterval() 返回的 ID 值。
+
+深入浅出
+num - 0 转变为数字
+val = +val
+num + ““ 字符串拼接
+==等于/===严格等于：NAN,对象不等于自身
+
+typeof
+instanceof  obj instance of Object
+
+没有块级作用域 有全局作用域和函数作用域
+
+try catch finally
+
+for(p in obj)
+1.顺序不确定
+2.enumerable为false时不会出现
+3.for in 对象属受原型链影响
+
+严格模式
+'use strict';
+不能使用with
+不允许未声明的变量被赋值
+arguments变为参数的静态副本
+如果传入的是数字不会受arguments不会受影响，如果是对象arguments会受影响
+delete 参数，函数名报错
+delete 不可配置的属性报错
+对象字面量重复属性名报错
+禁止八进制字面量
+eval,arguements变为关键字，不能作为变量，函数名
+eval独立作用域
+
+创建对象的方法
+1.字面量 var obj1={x:1,y:2}
+2.new构造器/原型链
+function foo(){}
+foo.prototype.z = 3;
+var obj = new foo();
+obj.y = 2;
+obj.x = 1;
+obj.z = 5; 给对象赋值是不会向原型链上去查找的
+delete obj.z 只会删除对象上的属性，不会影响的原型链
+原型链的最上面为 Object.prototype->null Object.prototype 含有 toString方法
+3.var obj = Object.create({x:1});
+
+Object.defineProperty  定义属性
+propertyIsEnumerable   是否可以枚举
+hasOwnProperty   是否含有属性
+writable 是否写
+configurable 是否可删除
+查看属性标签
+Object.getOwnPropertyDescriptor({pro:true},'pro');
+Object{value:true,writable:true,enumerable:true,configurable:true}
+
+定义属性
+var person={};
+Object.defineProperty(person,'name',{configurable:false,writable:false,enumerable:true,value:"Bason"});
+Object.keys(person);enumerable:true的可以返回
+Object.defineProperties();
+
+对象标签
+[[proto]] 原型
+[[class]]  对象是哪一个类型
+[[extensible]] 对象可扩展，对象上的属性可添加
+var obj = {x:1,y:2};
+Object.isExtensible(obj) //true
+Object.preventExtensions(obj)
+Object.isExtensible(obj) //false
+
+Object.seal(obj)
+Object.isSealed(obj) //true;
+configurable:false;
+
+Object.freeze(obj）
+Object.isFrozen(obj) //true;
+configurable:false writable:false;
+
+序列化
+JSON.stringify(obj);
+undefined 不会出现序列化 NAN,Infinity会转化为null
+JSON.parse('{"x":1'})
+JSON对象转化为JavaScript对象
+
+其它对象方法
+obj.toString();
+obj.valueOf();
+
+数组元素的增删
+arr.push() 在尾部增加
+arr.unshift() 在头部增加
+arr.pop() 在尾部删除元素
+arr.shift() 在头部删除元素
+delete arr[2]
+arr.length -= 1 删除尾部元素
+
+重复一个字符串用join属性
+function arr(str,n)
+{
+	return new Array(n+1).join(str);
+}
+document.write(arr("ddd",3));
+
+数组遍历的forEach方法
+var myArr = new Array(1,2,3,4,5,6,7,8);
+myArr.forEach(function(x,index,a)
+{
+	document.write(x +'|'+ index + '|'+(a===myArr));
+})
+x为数值大小，index为索引，a就是数组本身
+
+数组遍历的for in方法 数组有序属性遍历有序
+var myArr = new Array(1,2,3,4,5,6,7,8);
+for(p in myArr)
+{
+	document.write(myArr[p]+'</br>');
+}
+
+数组映射map
+myArr.map(function(x){
+	return x+10;
+})
+不会改变原来的数组
+
+数组过滤filter 
+var myArr = new Array(1,2,3,4,5,6,7,8);
+var m = myArr.filter(function(x,index)
+{
+	return (x%3===0)&&(index>3)
+})
+document.write(m);
+x为数组中的值，index为数组中的索引
+
+数组判断every与some
+var myArr = new Array(1,2,3,4,5,6,7,8);
+m = myArr.every(function(x)
+{
+	return x<10;
+})
+every是所有数值满足
+
+var myArr = new Array(1,2,3,4,5,6,7,8);
+m = myArr.some(function(x)
+{
+	return x<5;
+})
+some是存在数值满足
+
+数组值之间的操作，reduce与reduceRight
+var myArr = new Array(1,2,3,4,5,6,7,8);
+var m = myArr.reduce(function(x,y){
+	return x+y;
+},10)
+如果有第二参数10，10为最初的x，y为数组第一个，计算完，x为之前x与y操作的结果，y为后面的数值
+如果没有第二个参数10，x就为第一个数值，y就为第二个数值
+reduceRight 是方向不同，从右向左
+
+如何判断一个对象是数值
+Array.isArray([]);
+[] instanceof Array;
+({}).toString.apply([]) ==='[object Array]';
+[].constructor ===Array;
+
+函数声明 
+function add(a,b){};
+前置
+在定义该函数的作用域通过函数名访问
+函数表达式
+var add = function(a,b){};
+允许匿名
+立即调用
+
+this
+全局的this(浏览器)
+console.log(this===window);
+一般函数的this(浏览器)
+this仍然指向window
+
+作为对象方法的函数this
+var  o={
+	prop:37
+}
+function add(){
+	return this.prop;
+}
+
+var o={
+	prop:37,
+	f:function add(){
+	return this.prop;
+}
+};
+当作为对象的方法去调用，this会指向这个对象
+
+对象原型链上的this
+var o={
+	f:function(){
+		return this.a+this.b;
+	}
+}
+var p = Object.create(o);
+p.a = 1;
+p.b = 2;
+console.log(p.f());
+this指向访问它的对象
+
+get/set方法中的this也会指向get/set方法所在的对象
+
+构造器中的this
+若果构造函数没有返回值则则返回this
+function MyClass()
+{
+	this.a = 37;
+}
+var o= new MyClass();
+console.log(o.a);
+如果构造函数有返回值
+function Ig()
+{
+	this.a = 37;
+	return{a:38};
+}
+var o=new Ig();
+console.log(o.a);
+
+call/apply方法与this
+function add(c,d)
+{
+	return this.a + this.b + c + d;
+}
+var o = {a:2,b:3};
+var m = add.call(o,5,6);
+var m = add.apply(o,[5,6]);
+console.log(m);
+call和apply是Funciton的方法，他的第一个参数是this，第二个参数是Function的参数
+apply则是以数组传入
+
+bind方法与this
+function f(){
+	return this.a;
+}
+var g = f.bind({a:"test"});
+var o = {a:37,f:f,g:g}
+console.log(o.f(),o.g());
+bind方法
+this.x = 9;
+var module= {
+	x:81,
+	getX:function(){
+		return this.x;
+	}
+};
+
+console.log(module.getX())
+var getX = module.getX;
+console.log(getX())
+var boundGetX = module.getX.bind(module);
+console.log(boundGetX())
+
+函数属性&arguments
+foo.name - 函数名
+foo.length - 形参个数
+arguments.length - 实参个数
+
+bind与curring颗粒化通运函数
+function getConfig(colors,size,otherOptions){
+	console.log(colors,size,otherOptions);
+	
+}
+var defaultConfig = getConfig.bind(null,"#cccc","1024*768");
+console.log(defaultConfig("123"));
+console.log(defaultConfig("456"));
+
+bind与new
+function foo(){
+	this.b = 100;
+	return this.a;
+}
+var func = foo.bind({a:1});
+console.log(func());
+console.log(new func());
+如果用new调用,返回值要是一个对象，不然的就返回this指向一个空对象

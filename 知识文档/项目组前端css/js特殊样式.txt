@@ -1,0 +1,56 @@
+1.text-indent:-999px;
+overflow:hidden;
+2.蒙版
+#mask{ height:100%; width:100%; position:absolute; top:0; left:0; background:#000; opacity:0.5;}
+3.背景图片
+html,body{ height:100%}
+body{ background:url(images/body.png) center top;}
+
+前端攻城狮
+1.不加var全局变量
+2.在函数里局部变量，里面可以访问外面的，外面不能访问里面的
+3.数据类型：5+1
+undefined null boolean string number object function
+1undefined:当一个变量声明但未初始化时，就会被赋予undefined值
+2null:当一个变量是为了保存一个对象，但没办法立即初始化的时候，应该为之分配一个null值
+3boolean:
+其他数据类型向布尔值转换的规则
+空字符串：false
+number类型为0：false
+object类型为Null：false
+undefined类型：false
+4Number类型和string类型
+NaN与任何值都不相等，包括NAN本身
+5.Object
+Object类型具有任何属性和方法也同样存在于更具体的对象中
+
+数据类型转换
+Boolean();
+Boolean(0);false
+Boolean("");false
+Boolean(null);false
+Boolean(undefined);false
+parseInt();
+parseInt(""); NAN
+parseInt("123ab");123
+parseInt("0xA");10
+parseInt(10,8)8 把10进制的10转换为8进制的10
+var a = new Object();
+a.toString();
+"[object object]"
+String(null);
+"null"
+
+字符串对象
+stringObject.length 长度
+stringObject.charAt(index) 表示字符串中某个位置的数字
+stringObject.indexOf(substring, startpos) substring：规定需检索的字符串值 startpos：从第几位字符串开始检索
+stringObject.split(separator,limit) separator:指定的地方分割 limit:分割的次数
+stringObject.substring(startPos,stopPos)  startPos:开始位置 stopPos:结束位置
+stringObject.substr(startPos,length) startPos:开始的位置 length:提取字符串的长度
+
+运算符
+!!:即Boolean()
+&&:短路操作（if-else） Boolean()&&(a=2)
+||：默认值（var a=b||1;)
+三元运算符：q?a:b;

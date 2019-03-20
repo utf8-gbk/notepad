@@ -1,0 +1,8 @@
+居中
+bfc
+美丽的按钮
+阴影
+z-index
+轮播图
+从中间向四周放大
+border-radius

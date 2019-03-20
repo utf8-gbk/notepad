@@ -1,0 +1,80 @@
+el:'#box',
+data:{},
+methods:{}
+
+v-on:click="show()"
+v-module="msg"
+v-for="value in arr"
+v-show="true/false"
+v-bind：src 绑定属性
+
+
+引入vue cdn
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+vue的学习
+1.引入 vue cdn
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+2.el data methods ，{{}}
+new Vue({
+	el:"#vue-app",
+	data:{
+		name:"jack",
+		job:"boss"
+	},
+	methods:{
+		greet:function(time){
+			return `Good ${time}!`;
+		}
+	}
+});
+3.vue想拿自身对象的值 直接this.name
+
+4.vue中绑定属性 v-bind: 简写：  v-on: 简写@
+
+5vue中绑定html标签内容 <p v-html="websiteTag"></p>
+
+6.事件event中的内容
+event.offsetX
+event.offsetY 
+x,y的坐标
+
+7.事件修饰符：.stop，.prevent，.once
+
+8.键盘事件 .enter
+可以叠加 .enter.alt
+
+9.数据的双向绑定 /input/select/textarea
+法一：v-model = ""
+<input type="text" v-model="age">
+法二：ref
+<input ref="name" type="text" v-on:keyup="logName">
+logAge:function(){
+			console.log("你正在输入你的年龄")
+			this.age=this.$refs.age.value;
+		}
+
+
+10 computed:{} 优化 函数不加括号  （耗时 大量搜索使用计算属性computed）
+
+11 返回多个值时 return{,}中间用逗号隔开
+
+12class写法 
+v-bind:class="{changeColor:changeColor,changeLength:changeLength}"
+
+13 v-if /v-else-if 两个只显示一个  消失是从节点直接消失
+
+14v-show  消失是display：none  两个可以同时存在
+
+15遍历
+法一：数字下标获取 麻烦
+法二 v-for
+数组中是对象 用点访问符
+v-for="(user,index) in users"
+tempalte 优化 div
+v-for="(val,index)in user" 遍历对象
+
+16多个vue对象 可以相互改变其中的内容
+
+17Vue组件 template中只有一个根标签

@@ -1,0 +1,68 @@
+1.对象中包含一系列属性，这些属性是无序的。每个属性都有一个字符串key和对应的value
+2.对象的结构
+对象中的属性标签：writable enumerable configurable value get/set
+对象中的原型[proto] 对象中没有的属性会向[proto]上继续查找
+对象中的[class] 属于哪一个种类的
+对象中的[extensible] 对象是否允许继续增加新的属性
+Object.isExtensible(obj)//true
+Object.preventExtensions(obj);
+Object.isExtensible(obj)//false
+
+Object.seal(obj);
+在Extensible的基础上使configurable：false
+Object.isSealed(obj);
+
+Object.freeze(obj);
+在Extensible的基础上使configurable：false，writable：false
+Object.isForzen(obj);
+
+3.创建对象的方法
+字面量
+字面量创建的对象的原型直接指向Object.prototype
+new/原型链 
+function foo(){} foo.prototype.z是一个对象 var obj = new foo() obj中的[proto]指向foo.prototype
+Object.create()
+var obj = Object.create({x:1}) obj的原型指向create中的对象
+4.属性操作
+读写对象属性
+var obj ={x:2,y:2};
+obj.x     点访问符
+obj["x"] 中括号访问符
+属性异常
+var obj={x:1};
+obj.y;//undefined
+删除属性
+var person ={age:28,title:'fe'}
+delete person.age
+检测属性
+var descriptor = Object.getOwnPropertyDescriptor(Object,'prototype');
+descriptor.configurable;//false
+Object.defineProperty(cat,'price',{enumerable:false,value:2000});自定义一个属性的标签 不写的标签默认为false
+Object.defineProperties(person,{title:{},corp:{}});定义多个属性
+cat.hasOwnProperty('price')
+cat.propertyIsEnumerable('price')
+枚举属性
+5.属性getter/setter方法
+get age(){return new Date().getFullYear() - 1988;} get不能传入参数
+set age(val){console.log('Age can't be set to' + val); set只能传入一个参数
+6.获取对象上所有的key的方法
+Object.keys(person);
+7.对象序列化
+JOSN.stringify() js对象变JSON对象
+JOSN.parse()  JOSN对象变js对象
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

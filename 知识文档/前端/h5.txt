@@ -1,0 +1,46 @@
+ <meta charset="utf-8"> 
+ <meta charset="gbk">
+表单
+<input type="text" placeholder"这是一个输入框"> input 是一个输入框
+class="input-lg"输入框更大
+<label for="">这是一个输入框<label>
+class="form-control" 输入框特效
+class=""
+<select name="" id="">                     下拉
+<option value ="">北京</option>           选项
+ </select>
+
+<textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+class="form-inline" 水平排列
+class = "form-group" 组合
+class ="sr-only" 提示信息消失
+class ="has-success"绿色 hsa-warning  has-danger has-error
+class ="control-label" 可控制
+
+按钮 
+class ="btn btn-default"
+btn-success btn-primary btn-info btn-warning btn-danger btn-default 改变按钮的颜色
+btn-link 改变按钮的连接
+btn-lg btn-sm 按钮大小改变
+active 按下的效果
+btn-block 全屏状态
+disabled="disabled" 禁止按钮
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<a class="btn btn-danger "href=""></a> a 标签作按钮
+ 
+图片-形状
+img-rounded 圆角
+img-circle 圆形
+img-thumbnail 带有边框的圆角图形
+
+meta标签中的viewport
+width h
+
+@media screen and(max-width:900px)and(min-width:500px)
+{.test{ width:100%; height:100px; background:blue;
+}
+<div class="test col-lg-3 col-md-4 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-4"></div>

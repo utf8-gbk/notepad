@@ -1,0 +1,23 @@
+oop面向对象程序设计
+继承，封装，多态，抽象
+
+1.继承
+person.call(this,name,age);
+Student.prototype = Object.create(person.prototype);
+
+2.并不是所有的对象原型链上都有Object.prototype
+var obj = Object.create(null)
+
+并不是所有函数对象都会有prototype这个属性的
+function abc(){}
+var binded = abc.bind(null)
+
+3.改变prototype
+修改prototye会影响后续要创建的实例但不会影响已经创建的实例
+
+4.内置构造器的prototype
+Object.prototype.x = 1
+
+5.对象上的属性/原型链上的属性
+'z' in obj 原型链上有z就返回true
+obj.hasOwnProperty('z') 对象上有z才返回true

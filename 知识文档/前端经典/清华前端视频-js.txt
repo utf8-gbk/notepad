@@ -1,0 +1,75 @@
+javascript:ECMAScript语言本身 ，DOM对html的操作， BOM操作浏览器本身（用不到)
+标识符：第一个字符必须是一个字母、下划线_或一个美元符号（$）
+其他字符可以是字母、下划线、美元符号或数字
+*strict mode
+"use strict"
+严格模式执行代码 局部或全局
+不要省略 ；和 {} 习惯加（）
+var 在外和不加var 都是全局变量
+var在函数体内 局部变量
+数据类型：undefined null boolean number string object
+typeof运算符检查变量的数据类型
+typeof a 
+typeof(a)
+undefined 一个变量声明但未初始化，就被赋予undefined值
+typeof无法检查变量是被声明为undef还是未被声明 都返回字符串“undefined”
+null 当一个变量为了保存一个对象，但没法立即初始化的时候，应该为之分配一个null值
+boolean false true  
+string ：有字符就为true 没字符就为false
+number：非0为true 0为false
+object：有对象就为true null为false
+undefined ：任何情况都为false
+
+number&string
+NaN not a number 
+任何涉及NaN的操作都会返回NaN
+NaN与任何都不相等，包括NaN本身
+数据类型转化
+number（）
+parseint()
+parsefloat()
+string()
+tostring
+
+object object类型所具有的任何属性和方法也同样存在更具体的对象中
+创建实例 var o = new object();
+constructor
+hasOwnProperty(propertyName)
+
+javascript的运算符
+一元运算符 ++，--，+，-
+布尔运算符
+!! boolean()
+&& 短路操作 （if-else）
+||：默认值（var a=b||1;)
+相等运算符
+相等==  !=
+全等===  !== 数据类型一直
+其他运算符
+
+
+javascript语句
+表达式语句
+赋值语句
+a = 1+2 全局变量
+声明语句
+var a= 1+2 
+函数调用语句
+（function（）{}（）） （ function () {} )()
+流控制语句
+for-in,with建议不使用with
+语句-异常
+try异常触发 catch异常捕获 finally异常结果执行
+返回值问题
+无返回值的语句
+;空语句
+var a=b;变量声明语句
+function a(){}函数声明
+break/continue/label 控制语句
+
+
+javascript函数
+函数的参数
+ECMAScript的参数都是值传递
+重载
+函数没有重载

@@ -1,0 +1,411 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+a
+{
+	text-decoration: none;
+}
+html {
+	height: 100%;
+}
+
+body {
+	height:100%;
+	background: url(../img/background.jpg) no-repeat 0 0;
+	background-size: 100% 100%;
+	font-family: Î¢ÈíÑÅºÚ;
+	position: relative;
+
+}
+
+.top
+{
+	position: absolute;
+	top:3.1%;
+	left:11.7%;
+}
+
+.homepage
+{
+
+	width:6.5%;
+	height:13%;
+	line-height: 13%;
+	background-image: url(../img/Î´Ñ¡Ôñ×´Ì¬Ê×Ò³.png);
+	background-repeat: no-repeat;
+	border:solid 1px red;
+	position:absolute;
+	left:2.1%;
+	top:13%;
+}
+.examination
+{
+
+	width:6.5%;
+	height:13%;
+	line-height: 13%;
+	background-image: url(../img/Î´Ñ¡Ôñ×´Ì¬¿¼ÊÔ.png);
+	background-repeat: no-repeat;
+	border:solid 1px red;
+	position:absolute;
+	left:8.8%;
+	top:28%;
+}
+.score
+{
+	width:6.5%;
+	height:13%;
+	line-height: 13%;
+	background-image: url(../img/Î´Ñ¡Ôñ×´Ì¬³É¼¨.png);
+	background-repeat: no-repeat;
+	border:solid 1px red;
+	position:absolute;
+	left:2.1%;
+	top:42%;
+}
+.ranking
+{
+		width:6.5%;
+	height:13%;
+	line-height: 13%;
+	background-image: url(../img/Î´Ñ¡Ôñ×´Ì¬ÅÅÃû.png);
+	background-repeat: no-repeat;
+	border:solid 1px red;
+	position:absolute;
+	left:8.8%;
+	top:57%;
+}
+.withdraw
+{
+	position:absolute;
+	left:5.8%;
+	top:89%;
+}
+.exit
+{
+
+	width:8.3%;
+	height:10%;
+	line-height: 13%;
+	background-image: url(../img/Î´ÐüÍ£×´Ì¬.png);
+	background-repeat: no-repeat;
+	border:solid 1px red;
+	position:absolute;
+	left:2.1%;
+	top:89%;
+}
+.main
+{
+	height:72%;
+	width:66%;
+	border:solid 1px red;
+	position: absolute;
+	top:12%;
+	left:17%;
+	background-image: url(../img/¿ò.png);
+	background-size:100% 100%;
+}
+.main_c
+{
+	height:94.8%;				/*737*/
+	width:95%;					/*1203*/
+	border:solid 1px red;
+	position: absolute;
+	bottom:0%;
+	left:2.4%;
+	
+}
+.main .main_c .main_fish
+{
+	height:75%;				/*552*/
+	width:35.5%;				/*427*/
+	border:solid 1px red;
+	position:absolute;
+	top:10%;
+	box-sizing: border-box;
+	padding-left:2%;
+}
+.main .main_c .main_fish .main_fish_1
+{
+	height:10%;
+	width:17%;
+	border:solid 1px red;
+	float:left;
+	background-image: url(../img/ÒÑ×öÌâ.png);
+	margin-left:1%;
+	margin-top:7%;
+	background-size:100% 100%;
+	position:relative;
+}
+.main .main_c .main_fish .main_fish_2
+{
+	height:10%;
+	width:17%;
+	border:solid 1px red;
+	float:left;
+	background-image:url(../img/Õý×öÌâ.png);
+	margin-left:1%;
+	margin-top:7%;
+	background-size:100% 100%;
+	position:relative;
+}
+.main .main_c .main_fish .main_fish_3
+{
+	height:10%;
+	width:17%;
+	border:solid 1px red;
+	float:left;
+	background-image: url(../img/Î´×öÌâ.png);
+	margin-left:1%;
+	margin-top:7%;
+	background-size:100% 100%;
+	position:relative;
+}
+
+.main .main_c .main_fish .main_fish_3:nth-child(5n-3),.main .main_c .main_fish .main_fish_3:nth-child(5n-1)
+{
+	position: relative;
+    top: 4.6%;
+}
+.main .main_c .main_fish .main_fish_1:nth-child(5n-3),.main .main_c .main_fish .main_fish_1:nth-child(5n-1)
+{
+	position: relative;
+    top: 4.6%;
+}
+.main .main_c .main_fish .main_fish_2:nth-child(5n-3),.main .main_c .main_fish.main_fish_2:nth-child(5n-1)
+{
+	position: relative;
+    top: 4.6%;
+}
+.main_fish_1c
+{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.main .main_c .previous
+{
+	width:12.7%;
+	height:8.1%;
+	position: absolute;
+	bottom:6.6%;
+	left:42.2%;
+	border:solid 1px red;
+}
+.main .main_c .next
+{
+	width:12.7%;
+	height:8.1%;
+	position: absolute;
+	bottom:6.6%;
+	left:61.1%;
+	border:solid 1px red;
+}
+.main .main_c .submit
+{
+	width:12.7%;
+	height:8.1%;
+	position: absolute;
+	bottom:6.6%;
+	right:5.9%;
+	border:solid 1px red;
+}
+.main .main_c .time_c
+{
+	width:34.7%;
+	height:7%;
+	border:solid 1px red;
+	position: absolute;
+	top:10.1%;
+	left:56%;
+}
+.main .main_c .time
+{	
+	width:4.3%;
+	height:8.6%;
+	position:absolute;
+	top:9.1%;
+	left:46.2%;
+	border:solid 1px red;
+}
+.main .main_c .test
+{
+	width:47%;
+	height:47%;
+	position:absolute;
+	top:26%;
+	left:44%;
+	border:solid 1px red;
+}
+.main .main_c .test span
+{
+	font-size:23px;
+	color:#2d7fc8;
+}
+
+
+#abc
+{
+	visibility: hidden;
+}
+#a
+{
+ display: block;
+  border: 3px solid #AAAAAA;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+
+}
+
+.label1
+{
+	display: block;
+	height:25px;
+	width:500px;
+	position:relative;
+	border:solid 1px red;
+}
+.label1 .label1_c
+{
+	position:absolute;
+	top:0px;
+	left:50px;
+	font-size:20px;
+	color:#2d7fc8;
+}
+
+input[type=radio]:checked + label>#a::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: 8px;
+    left: 8px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+    background-color:blueviolet;
+}
+
+
+
+#abc1
+{
+	visibility: hidden;
+}
+#b
+{
+ display: block;
+  border: 3px solid #AAAAAA;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+
+}
+input:checked + label>#b
+{
+	background-color:cornflowerblue;
+}
+.label2
+{
+	display: block;
+	height:25px;
+	width:500px;
+	position:relative;
+	border:solid 1px red;
+}
+.label2 .label2_c
+{
+	position:absolute;
+	top:0px;
+	left:50px;
+	font-size:20px;
+	color:#2d7fc8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#abc2
+{
+	visibility: hidden;
+}
+#c
+{
+ display: block;
+  border: 3px solid #AAAAAA;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+
+}
+input:checked + label>#c
+{
+	background-color:cornflowerblue;
+}
+.label3
+{
+	display: block;
+	height:25px;
+	width:500px;
+	position:relative;
+	border:solid 1px red;
+}
+.label3 .label3_c
+{
+	position:absolute;
+	top:0px;
+	left:50px;
+	font-size:20px;
+	color:#2d7fc8;
+}
+
+#abc3
+{
+	visibility: hidden;
+}
+#d
+{
+ display: block;
+  border: 3px solid #AAAAAA;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+
+}
+input:checked + label>#d
+{
+	background-color:cornflowerblue;
+}
+.label4
+{
+	display: block;
+	height:25px;
+	width:500px;
+	position:relative;
+	border:solid 1px red;
+}
+.label4 .label4_c
+{
+	position:absolute;
+	top:0px;
+	left:50px;
+	font-size:20px;
+	color:#2d7fc8;
+}

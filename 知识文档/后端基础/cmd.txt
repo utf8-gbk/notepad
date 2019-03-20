@@ -1,0 +1,22 @@
+内部命令dir
+外部命令(可以更改可以拓展 在system32中) ping 
+
+基础命令
+cd.. 返回上级目录
+c:  d:
+md 新创
+rd 删除
+cd 首字母+tab 打开文件夹
+
+shutdown -s -t 00 关机
+
+shutdown -? 查看帮助
+
+mspaint 画图板
+
+ping baidu.com 查看自己网络是否通畅
+
+ipconfig 查看网络地址
+
+.bat 批处理时 执行名字不要跟命名名字重名 不然会死循环
+.bat dos和cmd通用 .cmd只能cmd用

@@ -1,0 +1,5 @@
+1.html boby height：100%；boby ：relative 或 html height：100%
+2.background-size:100% 100%;
+3.min-height:610px;
+  min-width:810px;
+4.百分比

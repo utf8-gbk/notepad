@@ -1,0 +1,15 @@
+&#160; 空格
+<input type="password"  style="width:250px;height:50px;"placeholder="Password" class="form-control"> 输入
+.form-control:focus{                                                点击颜色 focus属性
+	outline-color: #1b5193;
+
+} 
+background-size:100%;  背景图片100% 
+opacity:0.5;             透明度
+background-size: 299px 107px; 图片放缩
+background-position:-41px 4px; 图片移位
+<input type=checkbox style="width:20px;height:20px"> 复选框
+<link rel="stylesheet" type="text/css" href="./iconfont.css">
+<i class="iconfont icon-yanzhengma"></i>
+用来显示小图片
+http://www.iconfont.cn/search/index?q=%E6%96%B0%E6%B5%AA 小图标的网站

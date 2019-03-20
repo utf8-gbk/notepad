@@ -1,0 +1,290 @@
+q  ""
+blockquto 缩进样式
+&nbsp
+<address> 斜体块级
+<code> 
+<pre> 预格式化文本
+<table summary>
+<caption>
+ <tr> <th> <td>
+<a href tile target="_blank"
+如果mailto后面同时有多个参数的话，第一个参数必须以“?”开头，后面的参数每一个都以“&”分隔。
+<a href = "mailto:3013621295@qq.com?subject=观了不起的盖茨比有感&body = 你好，对此评论有些想法。">发送</a>
+input type: text password submit reset radio/checkbox email file
+name,value,checked，disabled
+注意:同一组的单选按钮，name 取值一定要一致
+textarea cols 列数 rows行数
+select option: value服务器调用的值 selected="selected" multiple
+label 
+标签的 for 属性中的值应当与相关控件的 id 属性值一定要相同。
+当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）。
+内联>潜入>外联 就近原则 如果外联的引入在潜入的前面那么外联的优先级要高点
+选择器
+标签选择器boby p h1 类选择器class id选择器 
+子选择器>(用于选择指定标签元素的第一代子元素。)
+包含(后代)选择器:即加入空格,用于选择指定标签元素下的后辈元素。
+*:通用选择器是功能最强大的选择器，它使用一个（*）号指定，它的作用是匹配html中所有标签元素
+伪类选择器a:hover
+分组选择符，
+权值的比较
+标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。例如下面的代码：
+p{color:red;} /*权值为1*/
+p span{color:green;} /*权值为1+1=2*/
+.warning{color:white;} /*权值为10*/
+p span.warning{color:purple;} /*权值为1+1+10=12*/
+#footer .note p{color:yellow;} /*权值为100+10+1=111*/
+注意：还有一个权值比较特殊--继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低。
+层叠:后面的样式覆盖前面的样式
+重要性：注意：!important要写在分号的前面
+
+内联元素之间有一个间距
+
+border
+dashed（虚线）| dotted（点线）| solid（实线）
+
+居中
+行内 ：text-align:center
+块级定宽： margin：0 auto
+块级不定宽：
+加入 table 标签
+1第一步：为需要设置的居中的元素外面加入一个 table 标签 ( 包括 <tbody>、<tr>、<td> )。
+第二步：为这个 table 设置“左右 margin 居中”（这个和定宽块状元素的方法一样）。
+2设置 display: inline 方法：与第一种类似，显示类型设为 行内元素，进行不定宽元素的属性设置
+3relative+float:left  (float触发bfc)
+	float:left;
+	position:relative;
+	left:50%;
+	transform:translate(-50%);
+}
+4.absolute (absolute触发bfc)
+                position:absolute;
+	left:50%;
+	transform:translate(-50%);
+
+触发bfc的条件
+根元素
+
+float的值不为none
+overflow的值不为visible
+display的值为inline-block、table-cell、table-caption
+position的值为absolute或fixed。
+
+
+
+前端攻城狮
+ins 插入
+del 删除
+img插入的4中方式
+<img src ="/草稿本2/img/timg.jpg" alt="bailefolun"/> 从跟目录找
+<img src="img/timg.jpg"> 当前img文件
+<img src ="timg.jpg"/>      当前文件
+<img src="https://pic.baike.soso.com/ugc/baikepic2/26145/20170923043430-630977915.jpg/0"/> 外部http
+
+a标签的href
+文档外链接
+<a href="/登陆界面/register.html">density</a>
+从根目录找
+<a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+44100343X+2018_T2/courseware/e80904aa468f4328886ac02fb399281c/598db63d902a40a285f2f26e2cf7082c/">density</a>
+外部http
+文档内导航
+<a href="#">1</a>
+回到顶部
+<a href="#top">2</a>
+寻找指定id
+
+ul和ol的浏览器默认样式
+上下外边距16px(根据字体大小)
+向右填充40px
+
+form表单
+一般默认情况enctype的编码方式是ur in code
+在有文件上传的时候<input type="file"/>enctype的编码方式为multipart/form-data
+
+文档对象模型DOM
+根节点 document对象
+元素节点 元素类型
+文本节点 text类型
+属性 attr类型
+
+HTML5的各种语义化分段元素
+header footer nav
+article section aside
+
+属性选择器
+E
+E(foo)包含属性
+E(foo="bar")包含属性并是bar (类似id）
+E(foo~="bar")包含属性含有bar （类似class）
+E(foo^="bar")包含属性以bar开头
+E(foo$="bar")包含属性以bar结尾
+E(foo*="bar")包含属性中有bar
+E(foo|="en")以en开头并用-连接后面
+
+上下文选择器
+e1 e2  e1的后代e2元素
+e1>e2 e1的子级e2元素
+e1~e2 e1后面的兄弟e2元素
+e1+e2 e1后面紧接的兄弟e2元素
+*通配符
+ul#partime-jobs>* li
+ul的孙子级及以下元素
+
+伪类选择器
+1.结构化的伪类选择器
+e:first-child
+e:last-child
+e:nth-child(2n+1)
+2.ul伪类选择器
+a:visited
+a:link
+e:hover
+e:focus
+e:checked
+e:active 当鼠标点击
+e:target  当页面跳转后
+
+伪元素选择器
+E::first-letter
+E::first-line
+E:before
+E:after
+例
+E::before{
+content="";
+}
+console小技巧
+选择指定元素在控制台输入$0指定该元素
+
+border
+border-style:solid dotted dashed double
+border-color没设置颜色就是color的颜色
+border-color transparent 透明边框定位
+{
+background-position:100% 40px;    因为background-position以左上角定位所设置据左边100%就是紧贴右边在设置个透明的右边框
+border-right:50px solid transparent;
+}
+
+border-radio
+border-radio:100px; 以100px为半径的园来切割
+border-radio:100px 10px 以左上方为上 右下方为下
+border-radio:100px/10px 水平方向半径与垂直方向半径比为椭圆来切割
+
+line-height
+1.line-height = font-size+字体上下默认距离
+2.line-height:3 为字体大小的3倍
+3.line-height=height; 居中
+
+text-align：center left right justify
+换行以空格换行
+
+vertical-align:
+baseline(默认)
+middle(基线和中线的中间线
+text-top:文本内容盒子的上边缘线和图片上边缘线
+text-bottom:文本内容盒子的下边缘线和图片下边缘线
+top:图片上边缘线和文本行盒的上边缘线对齐
+bottom：图片下边缘线和文本行盒的下边缘线对齐
+vertical-align:10px 在基线的基本上向上提升10px
+如果用百分比提升为行高的百分比
+
+background-size:100% 100%
+px px 
+contain 图片高宽同比列拉伸到一边(上边或右边)接触盒子
+cover    图片高宽同比列拉伸到两边接触盒子多余的截掉
+
+float
+float:left 向右浮动到父级元素最右边脱离文档流
+1.浮动一般向上浮
+2.float脱离文档流当时对文本流有影响不会覆盖文字
+clear：left，right，both 
+清楚浮动  1. 必须是块级元素  2.清楚浮动后的非浮动元素寻找没有浮动的位置放置
+		.clearfix:after
+		{
+			content:'';
+			display: block;
+			clear:both;
+		}
+		.clearfix
+		{
+			content:'.';
+			visibility: hidden;
+			height:0px;
+			display: block;
+			clear:both;
+		}
+
+position:relative的3种用法
+relative是相对于自身位移 原来的位置不会被占据
+1.为子元素作为参照物定位
+2.定位元素的层级高于非定位元素
+3.可以设置z-index
+
+弹性盒子布局
+container
+1.display:flex/inline-flex 设置弹性盒子
+2.flex-direction:row/row-reverse/column/column-reverse
+3.flex-wrap:nowrap(不自动换行元素挤在一行中)/wrap/wrap-reverse
+4.flex-flow = flex-direction||flex-wrap
+5.justify-content:flex-start/flex-end/center/space-between/space-around(每个元素两侧相同的空白)
+6.align-content(行的设置):flex-start(盒子大小内容大小)/flex-end/center/space-between/space-around/stretch(default)
+7.align-items flex-strat/flex-end/center/stretch/baseline(字的基线对齐)
+items
+1.order
+2.align-self auto/flex-strat/flex-end/center/stretch/baseline(字的基线对齐)
+3.flex-grow:1 增长因子 包容多余的间隔
+4.flex-shrink:1  缩减因子 
+5.flex-basis    主轴(row:flex=width宽度 colum:flex=height)基础大小
+6.flex
+
+响应式布局
+1fluid grids 流式网格（用百分比或vw，vh)
+2.flexsible images 弹性图片 max-width(小的盒子中缩小，大的盒子中原始大小)
+3.media queries 媒体查询
+@media all/screen and (max-width:600px) width,height,aspect-ratio视口宽度与高度的比例
+{
+   rule1
+   rule2
+}
+
+移动优先的响应式设计：流量大，加快渲染速度，节约带宽
+
+transform
+1.要block类型或inline-block类型
+2.rotate 正数顺时针旋转 负数逆时针旋转
+3.scale（0.5）缩放为原始大小的0.5  scaleX(0.5)只在水平方向缩放 scaleY(0.5)只在垂直方向缩放 scale(0.5,2) 水平缩放0.5垂直缩放2
+4.translate(20px)只有一个参数水平 正数水平向右垂直向下
+5.skew(45deg) 只有一个参数水平 正数向左倾斜 
+   skewY(45deg)正数右上角向上倾斜 负数右上角向下倾斜
+6transform:translate(20px) scale(0.5)  实现是从左向右 注意：scale和rotate会改变图像的标尺的大小 和 方向
+7.transform-orign确定元素的基点 
+transform-origin:100% 100%;top left;0px 0px;
+
+transition
+1.transition-property
+2.transition-duration
+3.transition-timing-function(ease linear ease-in ease-out ease-in-out)
+4.transition-delay
+
+animation
+1.@keyframes bounce{
+			0%
+			{
+				left:0px;
+				top:0px;
+			}
+			50%
+			{
+				top:300px;
+				left:200px;
+			}
+			100%
+			{
+				left:400px;
+				top:0px;
+			}
+		}
+2.animation:
+animation-property
+animation-duration
+animation-timing-function(ease linear ease-in ease-out ease-in-out)
+animation-delay

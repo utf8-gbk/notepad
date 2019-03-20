@@ -1,0 +1,275 @@
+9.17
+title ：鼠标移动到字上给个提示
+<del></del> 删除元素
+<ins></ins> 插入元素
+image插入的3种形式 直接网址
+		相对路径
+		绝对路径
+文档外连接
+在新的网页上打开链接 target="_blank"
+文档内链接
+<a href="#id"></a>
+文档外连接和文档内导航的综合
+<a href ="/course/202#aq></a>
+表单内
+<p><input type="text"/> <p>单行输入
+<p><textarea></textarea><p>多行输入
+<p><input type="file"/><p>
+<p><input type="submit"/> <p>提交
+表单属性
+action：指定一个url method：方法 enctype:编码方式
+header
+nav
+article
+section
+aside
+footer
+9/19
+HTML中应用css的三种常用的方式
+文档内样式代码
+元素的行内样式
+外部样式文件
+css选择器
+type
+id
+class  .outline.red
+css的级联和继承
+级联
+规则的选择器特制度：
+id>class>type
+重要性importance：!important;
+规则的来源：未加important 来自于浏览器预设的<user style sheet(用户设置的)<开发者开发的 加了important优先级就反过来
+比较特指度：I-T-C规则 c为属性选择器+class选择器+伪类选择器  T type选择器+伪类选择器
+特指度相同：后面的覆盖前面的
+继承
+
+laber for=id 绑定
+disabled 属性 禁用的状态
+属性选择器
+E
+E[foo]
+E[foo = "bar"]
+E[foo~="bar"]
+E[foo^="bar"]
+E[foo$="bar"]
+E[foo*="bar"]
+E[fool="en"]
+input[disabled]
+{
+crusor:not-allowed;
+}
+上下文选择器
+e1 e2
+e1>e2
+e1~e2
+e1+e2
+* 通配符/占位的效果
+ul#id >* li 选的id孙子级的li
+伪类选择器
+第一种：结构化的伪类选择器
+e:first-child
+e:last-child
+e:nth-child(n)
+第二种：ul伪类选择器
+a:visited  已访问
+a:link       未访问
+e:hover	悬停
+e:focus	获得焦点
+e:checked	单选或复选框按钮被选中时显示样式
+e:active   元素被激活的时候
+e:target   文档超链接跳转时显示样式
+伪元素选择器
+E:first-letter
+E:first-line
+E:before
+E:after
+width:50vw 100vw时浏览器的宽度
+h3:before
+{
+content:"--";
+}
+小的调试技巧
+console $0 $0.innerHTML
+
+css基础
+
+font的相关属性
+font-family的五种字型        可继承
+serif		有沟
+sans-serif		无钩
+monospace	等宽
+cursive		手写
+fantasy		连写
+
+font-size 大小	         可继承
+font-style 字体样式             可继承
+font-weight 字体细粗         可继承
+font简写属性	         可继承 html5不支持
+font简写必须有font-family和font-size size在family之前
+并且 其他属性必须在size之前
+
+text的相关属性
+color 前景色，字体颜色和边框颜色
+text-indent 前右缩进
+letter-spacing 字母中文汉字之间的间隔
+word-spacing 在原有的基础上改变空格的间隔
+line-height 在原本字体大小上上下添加空隙   继承
+line-height = height: 文本居中
+text-decoration
+text-align:center 设置块级元素中的文本和line元素 可继承的
+text-align：justify 左右对齐 字少被拉伸就很稀疏
+vertical-align 作用于行内元素或表格单元元素      不可继承的
+行内元素的高度取决于内容的高度与行高没有关系
+vertical-align:baseline 基线对齐 图片的基线就是底端
+vertical-align:middle 图片的中线对齐x-height的中间
+vertical-align:text-top 图片的上边缘线和内容盒子的上边缘线对齐
+vertical-align:text-bottom 图片的下边缘线和内容盒子的下边缘线对齐
+vertical-align:bottom 图片的下边缘线和行盒的下边缘线对齐
+vertical-align:top 图片的上边缘线和行盒的上边缘线对齐
+vertical-align:10px 图片底部相对于基线上10px对齐
+vertical-align:10% 图片底部相对于基线上img行高的10%对齐
+盒子模型
+box-model(border margin padding width height)
+border padding 的内容加在盒子内部
+box-sizing:content-box 默认内容的宽度
+box-sizing:border-box 设置为盒子的宽度
+box-shadow border-radius border-image
+垂直外边距要折叠
+inline行内元素：img strong a span 不能设计高度和宽度（不包括img，img为外部替换）
+block块级元素：h1 p ol ul li
+inline-block 在块级元素的基础上 不用换行 a元素设置inline-block使点击的区域变大
+none：将元素隐藏
+背景相关的属性
+background-color
+background-image
+background-repeat
+background-size:100% 100%,contain(同比例放大到跟盒子宽度一样),cover(同比例放大到跟盒子宽度和高度一样多余的部分截掉)
+浮动与清楚浮动
+float是脱离文档流的
+clear：both clear:left clear:right 清除浮动
+float脱离文档流后div height为0为了保持原有的样式有三种方法
+这两种方式不建议使用 改变父元素原有的布局
+方法一：父元素也设计为浮动元素      触发bfc 独立块级布局
+方法二：父元素加 overflow:hidden   触发bfc 独立块级布局
+方法三（推荐）在最后加一个空的子元素clear：both
+使用伪元素 用class选择器 一般为class="clearfix"
+#div1:after
+{
+content:".";
+clear:both;
+display:block;
+visibility:hidden;
+height:0;
+}
+基于浮动的布局
+左右浮动先写在前面
+中间的元素不写浮动width：auto margin-left：右浮动的宽度 margin-right: 左浮动的宽度
+定位详解
+后面的元素比前面的元素的层级高
+定位元素比非定位元素的层级高
+z-index设置层级
+position:static        非定位元素
+position:relative      相对定位1.高层级2.为子级提供定位3.脱离文档流但保留原来的位置
+position:absolute    绝对定位1.相对于父级的定位2.如果父级都没有定位那么以窗口首页定位3.脱离文档流不保留原来的位置
+position:fixed          绝对定位相当于浏览器窗口进行定位
+弹性盒子
+container属性
+display:flex / inline-flex 使用弹性盒子算法
+flex container属性
+flex-direction:row row-reverse column column-reverse
+flex-wrap:nowrap wrap wrap-reverse
+flex-flow = flex-direction||flex-wrap
+justify-content:flex-start flex-end center space-between space-around
+align-content:flex-start flex-end center space-between space-around stretch(默认) 针对于行
+align-items:flex-start flex-end center baseline stretch(默认)  一行的控制
+设置了高度就是设置高度 没有设置高度如果是stretch则是拉伸到行长 不是stretch则是包含字体高度
+flex items属性
+order 元素自身的顺序 order小的先于order大的
+align-self：auto（默认继承父元素） flex-start flex-end center baseline stretch 对于元素自身单个控制
+flex-grow  自身元素增长一行中多余空间 
+flex-shrink 
+flex-basis  width和height的设置
+flex :flex-grow||flex-shrink||flex-basis 默认值 0 1 auto 缺省值：1 1 0%
+vendor prefixes 厂商前缀的属性赋值
+
+网格布局 GRID 使用浮动 或 弹性盒子
+自己设置样式
+wrapper 
+row
+col
+引入boostrap
+非流动型
+container 最外盒子
+row 一行
+col-md-1
+流动型
+container-fluid
+row
+col-xs-12 col-sm-6 col-md-4 col-lg-3
+响应式布局
+fluid grids 流式布局
+不要用固定的像素来布局 用百分比和vw vh来布局
+flexible images 弹性图片  max-width在大的屏幕上显示图片原有大小 在比较小的屏幕上显示大小为盒子大小
+media queries 媒体查询
+@media(max-width:600px)
+{ nav,section{float:none;width:atuo;}
+}
+@media mt and(mf1) and(mf2) and(mf3) 
+{
+rule1
+rule2
+}
+媒体特征：width height aspect-ratio(width与height的比) orientation(height<width:landscape height>width:portrait
+媒体类型：all screen speech print
+移动优先：需求驱动移动端流量大 针对移动设备加速渲染速度 节约带宽
+transform
+transformable elements : block inline-block
+transform:translate(20px,50%) 以中间点移动 
+transform:translatex(2em) 正的向右移动
+transform:translatey(3in)   正的向下移动
+transform:scale(2,0.5)
+transform:scalex(2)
+transform:scaley(0.5)
+transform:rotate(45deg顺时针 -45逆时针) 以中心点旋转
+transform:skew(30edg,20edg)
+transform:skewx(20edg) 正的向左倾斜
+transfrom:skewy(30edg) 负的向右倾斜
+transform多个属性要一起写不能分开写，分开写会级联
+transform-origin(寻找基点):top,left 百分比 px
+transform:translate(20px) scale(2) rotate(45edg); 顺序是从右向左
+兼容性问题 厂商前缀
+-webkit- 苹果浏览器
+-moz-    
+-ms-     ie浏览器
+-o-  opera浏览器
+动态变化
+transition属性
+transition-property:all 具有过渡效果的列表属性
+transition-duration  过渡的时长
+transition-delay  执行过渡效果前的等待时间
+transition-timing-function:ease/ease-in/ease-out/ease-in-out/linear
+transition:width 4s linear 1s;
+width：300px
+transition-property:width
+transition-duration:3s
+
+animation
+第一步
+@keyframes bounce
+{ 
+0%{left:0;top:0}                                 百分号是动画进行的时间
+50%{left:200px;top:200px;}   
+100%{left:400px;top:0px;}
+}
+第二步
+animation:bounce 4s linear 0s
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+第三步
+用户交互触发
+.box:hover .ball
+{
+animation:bounce 4s linear 0s
+}

@@ -1,0 +1,13 @@
+1.a.header_li 与 a .header_li 的差别
+  前者a中的class叫header_li
+  后者a的子级的class叫header_li
+2.百度导航条最右边
+单独设置margin a标签设置inline-block
+3.input里面放图片
+span中放个inpu和span
+外面span设置inline-block
+里面span绝对定位
+4.relative 和 float
+5.百度技巧 两个盒子一个地位% 另一个定位px
+6.最小高度 最小宽度
+7.bfc

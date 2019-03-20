@@ -1,0 +1,54 @@
+<canvas id="canvas"></canvas>
+var canvas = document.getElementById("canvas")
+var context = canvas.getContext('2d')
+
+canvas.width
+canvas.height
+canvas.getContext('2d')
+
+context.moveTo(x,y);
+context.lineTo(x+width,y)
+
+context.lineWidth = 5;
+context.strokeStyle = "#ccc";
+context.fillStyle
+
+context.stroke()
+context.fill()
+
+context.beginPath();
+context.closePath();
+
+context.arc(300,300,200,0,0.5*Math.PI,true);
+context.clearRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT); 对矩形内容刷新
+
+rect(x,y,width,height);  矩形的状态
+fillRect(x,y,width,height);  填充矩形
+strokeRect(x,y,width,height);  描边矩形
+
+context.lineCap = "butt"default
+context.lineCap = "round"  开始和结尾多出圆形
+context.lineCap = "square" 开始和结尾多出正方形
+
+context.lineJoin = "miter" 尖形
+context.lineJoin = "bevel" 方形
+context.lineJoin = "round" 圆形
+
+context.miterLimit = 10; 在有context.lineJion = "miter"的属性下有此属性，当内角和外角的之间的距离大于10px
+
+canvas的坐标系 y轴向下
+
+图形变化前
+save()
+图片变化后
+restore()
+
+图片变换
+位移 translate(x,y)
+旋转 rotate(deg)
+缩放 scale(sx,sy) 内容及属性都会被缩放
+
+变换矩阵有级联的效果
+transform（水平放缩，水平倾斜，垂直倾斜，垂直放缩，水平方向，垂直方向）
+
+setTranform(1,0,0,100,100) 使之前的矩阵效果失效，只运行当前的效果

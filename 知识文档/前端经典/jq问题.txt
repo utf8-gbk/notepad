@@ -1,0 +1,39 @@
+ return '<div class="' + $(this).text() + '" />';
+https://www.imooc.com/code/10381
+
+  </script>
+    <script type="text/javascript">
+    $(".aaron2").on('click', function() {
+  	if($('.left div').length>2) return;
+        //wrapAll接受一个回调函数
+        //每一次遍历this都指向了合集中每一个a元素
+        $('a').wrapAll(function() {
+            return '<div></div>'
+        })
+    })
+    </script>
+https://www.imooc.com/code/10383
+
+
+https://www.imooc.com/code/10156
+
+ $('p').click(function(e) {
+            alert(e.target.textContent)
+        })
+        //this指向button元素
+        $("button:eq(1)").click(function() {
+            $('p').click() //指定触发绑定的事件
+        })
+$("button:eq(1)").click(function() {
+            $('p').click(function(e) {
+            alert(e.target.textContent)
+        })
+        })
+https://www.imooc.com/code/9710
+
+
+
+
+
+
+https://www.imooc.com/code/10155

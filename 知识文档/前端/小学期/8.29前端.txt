@@ -1,0 +1,53 @@
+1.Math.random()用来生成一个在0(包括0)到1(不包括1)之间的随机小数
+随后的函数都会在return执行前调用，所以我们可以直接返回Math.random()的值。
+2.向下取整 Math.floor(Math.random()*10);
+3.Math.floor(Math.random() * (max - min + 1)) + min 两个特定范围内的随机数
+4.flag JavaScript 使用循环语句查找通讯录
+5.正则表达式
+5.1例如：如果我们想要找到字符串The dog chased the cat中单词 the，我们可以使用下面的正则表达式: /the/gi
+我们可以把这个正则表达式分成几段：
+/ 是这个正则表达式的头部
+the 是我们想要匹配的模式
+/ 是这个正则表达式的尾部
+g 代表着 global(全局)，意味着返回所有的匹配而不仅仅是第一个。
+i 代表着忽略大小写，意思是当我们寻找匹配的字符串的时候忽略掉字母的大小写。
+5.2在选择器后面添加一个加号标记(+)，例如：/\d+/g，它允许这个正则表达式匹配一个或更多数字。
+5.3我们也可以使用正则表达式选择器 \s 来查找一个字符串中的空白。
+空白字符有 " " (空格符)、\r (回车符)、\n (换行符)、\t (制表符) 和 \f (换页符)。
+空白正则表达式类似于：/\s+/g
+5.4你可以用正则表达式选择器的大写版本来反转任何匹配（相反意思）。
+例如：\s 匹配任何空白字符，\S 匹配任何非空白字符。
+6.创建文本输入框 <input type="text">
+7.HTML 为文本输入框设定预定值 <input type="text" placeholder="this is placeholder text">
+8.HTML 添加表单 
+你可以使用HTML来构建跟服务器交互的Web表单。你可以通过在form元素上添加一个action属性来执行此操作。
+action属性的值指定了表单提交到服务器的地址。
+<form action="/url-where-you-want-to-submit-form-data"></form>
+9.HTML 为表单添加提交按钮 <button type="submit">this button submits the form</button>
+10.HTML 使用HTML5技术把表单设置为必填 <input type="text" required>
+11.HTML 添加单选框
+单选按钮是 input 输入框的一种类型。
+每个单选按钮都应该嵌套在自己的 label(标签) 元素中。
+所有关联的单选按钮应具有相同的 name 属性。
+<label><input type="radio" name="indoor-outdoor"> Indoor</label>
+12.HTML 添加复选框
+复选按钮是 input 的输入框的一种类型。
+每一个复选按钮都应嵌套在其自己的 label元素中。
+所有关联的复选按钮输入应该具有相同的 name属性。
+<label><input type="checkbox" name="personality"> Loving</label>
+13.HTML 使用checked属性设置复选框和单选框默认被选中
+使用 checked 属性，你可以设置一个单选框和复选框默认被选中
+<input type="radio" name="test-name" checked>
+14.margin的负值 如果将一个元素的 margin 设置为负值，则元素将会变大。
+15.多个class的属性 
+通过用空格分隔多个 class 属性，可让 HTML 元素应用多个 class 属性：
+class="class1 class2"
+16.CSS 多个class处理样式覆盖
+注意：在 HTML元素中列出这些 class 的顺序并不重要。
+然而，<style> 部分中的 class 声明的顺序是重要的，第二个声明将始终优先于第一个声明。
+17.CSS 通过ID的样式属性覆盖class类的声明 
+id属性具有跟高的优先级
+18.CSS 通过内联样式覆盖class类的声明与id的声明
+19CSS 通过使用Important覆盖所有其他样式 
+在许多情况下，您将使用CSS库。这些可能会意外覆盖您自己的CSS。所以当你绝对需要确定一个元素具有特定的CSS时，可以使用 !important。
+color: pink !important;

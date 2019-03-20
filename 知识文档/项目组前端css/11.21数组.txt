@@ -1,0 +1,79 @@
+1创建数组-字面量         var arr=[1,2,3];  数组的最长的大小2^23-1
+2创建数组-new Array   var arr=new Array(); var arr=new Array(100); var arr = new Array(1,2,3);
+new是可以省略的
+3数组元素的读写 使用索引
+arr[1]; arr.length;delete arr[0]；将元素的索引删掉，undefined
+4数组元素的增删
+1arr[arr.length]=4
+2arr.push();
+3arr.unshift()
+
+1arr.length-=1;
+2arr.pop();
+3arr.shift();
+
+二维数组
+稀疏数组：稀疏数组并不含有从0开始的连续索引。一般length属性值比实际元素个数大
+
+数组方法
+{} = >object.prototype
+[] = >Array.prototype
+
+jion 将数组转换为字符串 :原函数未被改变
+function repeatString(str,n)
+{return new Array(n+1).join(str);
+}n次重复一个字符串
+
+reverse 将数组逆序：原数组被修改
+
+sort 将数组排序：原数组被修改
+arr.sort(function(a,b){return a-b;});a-b升序 b-a降序
+
+concat 将数组合并 :原数组未被修改
+arr=[1,2,3,5,4];
+arr.concat([10,11],14);
+
+(8)?[1, 2, 3, 4, 5, 10, 11, 14];
+
+silce返回部分数组 :原数组未被修改
+左闭右开 支持负数-1表示数组最有一个元素
+
+splice ：数组拼接,原数组被修改，返回删除的数组
+第一个参数是删除的位置，第二个参数是删除的个数，后面的参数是要添加的元素
+
+ES5
+数组遍历
+arr.forEach(function(x,index,a){});
+x为数组值，index索引，a就是数组
+
+数组映射 ：原数组未被改变
+arr.map(function(x){
+return x+10;})
+
+数组过滤
+arr.filter(function(x,index){
+return index%3==0||x>=8;
+});
+
+数组判断
+arr.every(function(x){
+returnx<10;});
+arr.somefunction(x){
+returnx<10;});
+
+数组中两两操作：原数组未被修改
+reduceRight 从右向左
+arr.reduce(function(x,y){
+return x+y},0);
+
+数组检索
+arr.indexOf(2,2);
+arr.lastIndexOf(2,-3);
+第一个参数查找的元素，第二个参数查找的位置
+
+判断是否为数组
+Array.isArray([]);
+
+字符串和数字
+字符串属于类数组没有数组的一些属性可以使用call获得
+Array.prototye.join.call(str,"_");

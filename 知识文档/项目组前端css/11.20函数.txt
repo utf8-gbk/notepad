@@ -1,0 +1,86 @@
+函数中的this
+函数中的arguments
+函数的作用域
+函数的不同调用方式
+函数的不同创建方式
+
+函数的不同调用方式
+foo();   		直接调用
+o.method();	对象方法
+new Foo();	构造器
+func.call(o);	call/apply/bind
+
+函数的不同创建方式
+函数声明
+函数声明会被前置
+function add(a,b){};
+函数表达式
+var add = function(a,b){};
+(function(){})();
+!function(){}();
+return function(){};
+
+this
+1全局的this指向window
+2一般函数的this指向window
+3作为对象方法的函数的this指向对象本身
+4对象原型链上的this指向对象本身
+5get/set方法上的this指向对象本身
+6构造器中的this
+用构造器调用函数，this会指向一个空的对象，对象的原型会指向构造器调用的函数
+没有返回值或返回值不是对象，this作为返回值，有返回值并且为对象返回return的内容
+7call/apply中的this
+function add(c,d){return this.a+this.b+c+d;}
+var o = {a:1,b:3};
+add.call(o,5,7}；//16  
+函数this指向call中的第一个参数
+8bind方法中的this指向bind中的声明的参数
+function f(){return this.a;}
+var g = f.bind({a:"test"});
+var o={a:37,f:f,g:g};
+console.log(o.f(),o.g());//37,test
+
+
+函数属性&arguments
+foo.name 函数名
+foo.length 形参个数
+arguments.length 实参个数
+一般模式下arguments可以改变实参的值，严格模式下不能改变
+
+bind颗粒化功能
+function getConfig(colors,size,otherOptions){
+console.log(colors,size,otherOptions);
+}
+var defaultConfig = getConfig.bind(null,"#CC000","1024*768");
+defaultConfig("123") ;//#CC000 1024*768 123
+defaultConfig("456");//#CC000 1024*768 456
+
+bind与new
+function foo(){
+this.b = 100;
+return this.a;}
+var func = foo.bind({a:1});
+func();//1
+new func();//{b:100} 因为函数foo中返回的不是一个对象所以this会指向一个空的对象，对象的原型会指向构造器调用的函数
+
+函数的执行上下文
+抽象概念：执行上下文EC，变量对象VO，函数中的激活对象AO=VO
+函数中分为两个阶段
+1.变量初始化阶段
+1.函数参数（若未传入，初始化该参数值未undefined)
+2.函数声明（若发生命名冲突，会覆盖）
+3.变量声明（初始化变量值未undefined，若发生命名冲突，会忽略）
+
+2.代码执行阶段
+x = 10;
+function x(){} 函数声明前置
+因为函数声明前置后在给x赋值，所以x不在是一个函数
+
+闭包
+1.函数内的函数可访问外部函数的变量，并且外部变量不会被回收
+for(i=0;i<3;i++)
+2.闭包调用外部的i为3
+
+作用域
+1.全局作用域，函数作用域，eval
+2.没有块级作用域

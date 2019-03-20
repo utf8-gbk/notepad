@@ -1,0 +1,22 @@
+	$('.addclass').click(function(){
+		var index = layer.open({
+			type:1,
+			area:["509px","303px"],
+			skin:"myskin",
+			resize:false,
+			content:`<div class="layer_addclass">
+			<div class="layer_mid"><p style="text-align: center;">确定要添加这个班吗？</p></div>
+			<div class="layer_bottom">
+				<div class="layer_bottom_l"></div>
+				<div class="layer_bottom_r"></div>
+			</div>
+		</div>`
+			
+		});
+		
+
+		
+		
+		
+		
+	});

@@ -1,0 +1,90 @@
+body {background-color:yellow;}
+h1   {font-size:36pt;}
+h2   {color:blue;}
+p    {margin-left:50px;}
+链接
+a:link    {color:green;}
+a:visited {color:yellow;}
+a:hover   {color:black;}
+a:active  {color:blue;}
+文本
+text-decoration:none;无下线
+text-align:center;  文字居中
+p.uppercase {text-transform:uppercase;}
+p.lowercase {text-transform:lowercase;}
+p.capitalize {text-transform:capitalize;} 转换
+字体
+font-family:arial; 字体类型
+font-style:normal; 字体形状
+font-size:40px;字体大小 px em 1.3em
+背景
+background-image 背景图片 {background-image:url('paper.gif')
+background-color 背景颜色
+background-repeat background-repeat:repeat-x;	background-repeat:repeat-y; background-repeat:no-repeat; 重复
+background-attachment background-attachment:fixed;固定背景
+background-position background-position:center; 中间位置
+外边距
+margin-top:100px;
+margin-bottom:100px;
+margin-right:50px;
+margin-left:50px;
+选择器
+id选择器 id="para1" #para1{}
+class选择器 class="center" .center{}
+颜色
+body {color:red;}
+h1 {color:#00ff00;}
+h2 {color:rgb(255,0,0);}
+列表样式
+list-style-type: circle;
+list-style-image: url('sqpurple.gif');图片作为标记
+内边距
+padding-top:25px;
+padding-bottom:25px;
+padding-right:50px;
+padding-left:50px;
+外边距
+margin-top:100px;
+margin-bottom:100px;
+margin-right:50px;
+margin-left:50px;
+盒子模型
+div {
+color:blue;
+background-color: lightgrey;
+height:100px;
+width: 300px;
+border:3px solid green;
+padding: 25px;
+margin: 25px;
+}
+表格
+table, td, th {
+border: 1px solid black;
+border-collapse: collapse;
+}
+优先级
+.marked p
+.marked
+p
+尺寸
+height 元素高度
+line-height 行高
+max-height 最大高度
+min-height 最小宽度
+max-width  最大高度
+min-width 最小宽度
+width 元素宽度
+隐藏元素
+h1.hidden {visibility:hidden;}
+h1.hidden {display:none;}
+li {display:inline;} 块->内
+span {display:block;} 内->块
+定位
+absolution 绝对 整个文本
+relative 相对 父级
+浮动
+float:right;
+clear:both;
+要水平居中对齐一个元素(如 <div>), 可以使用 margin: auto;。
+如果没有设置 width 属性(或者设置 100%)，居中对齐将不起作用。

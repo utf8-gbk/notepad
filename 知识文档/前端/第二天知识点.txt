@@ -1,0 +1,64 @@
+第一：向右浮动
+*{
+	margin :0px;
+    paddding:0px;
+}
+.top
+{
+	background-color: darkgray;
+	height:50px;
+	weight:100%;
+	border:solid 1px green;
+	font-size:30px;
+	/*float:right;*/
+}
+.top  ul{
+	float:right;
+}
+.top  ul li
+{
+	list-style: none;
+	float:right;
+	margin-right:20px;
+}
+第二：文字位置与框架位置居中
+框架
+父级：position：relative
+子级：position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+文字：（一行文字）
+height:50px;
+line-height:50px;
+text-align:center;
+第三:
+<hr color="#A9A9A9" width="200px" size="3"> 字上填横线
+第四
+一个框架中设计2个比列不同的框架
+.forth {
+	color:antiquewhite;
+	width: 100%;
+	height: 500px;
+	border: solid 1px black;
+	position: relative;
+}
+
+.f1 {
+	width: 40%;
+	height: 500px;
+	border: solid 1px black;
+	position: absolute;
+	background-image:url(img/u=3047975814,4194768766&fm=27&gp=0.jpg)
+}
+
+.f2 {
+	width: 60%;
+	height: 500px;
+	margin-left: 40%;
+	border: solid 1px black;
+	background-color: #7FFFD4;
+	position: absolute;
+	background-image:url(img/timg9.jpg);
+}
+

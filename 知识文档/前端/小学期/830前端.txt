@@ -1,0 +1,98 @@
+1.boostrap响应式
+通过Bootstrap使图片适配手机显示
+<link href="//fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+给图片添加 img-responsive 的class属性,图片的宽度就能自动适配你手机屏幕的宽度啦。
+2.通过Bootstrap使文本居中
+给标签添加text-center的class属性,标题文字就可以居中了
+3.通过Bootstrap添加一个按钮 
+添加一个 button 标签,并且为它添加 btn 这个class
+4.添加一个Bootstrap块级元素按钮
+如果你想是你的button 标签的宽度充满整个屏幕,你可以使用btn-block这个class讲按钮升级为块级元素,使button标签的宽度充满整个屏幕,并且该元素后面的所有元素都会浮动到下一行。
+友情提醒:这些按钮仍然需要 btn class。
+5.boostrap中的颜色应用
+btn-primary类是该应用的主要颜色类，这个类的颜色对于那些你希望高亮提示用户的操作上非常有用。
+btn-info 通常被用在用户比较可能会点击的操作上。
+btn-danger这个按钮的颜色是用来告诉用户,该操作具有一定的危险性，比如删除猫咪照片这样的操作。
+6.使用Bootstrap做页面布局
+之前三个向下排列的按钮
+进一个<div class="row"> 标签,然后把按钮嵌进<div class="col-xs-4"> 中,设置按钮占用的列宽，就可以行并排列
+7.使用Bootstrap span标签来创建行内元素
+通过使用span 标签，可以将多个标签放在一起，甚至可以对同一标签的不同部分进行不同的样式设置。
+8.在按钮上使用Font Awesome图标
+<link rel =“stylesheet”href =“// maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css”/>
+i标签最初用于制作其他元素斜体，但现在通常用于图标。 您可以将Font Awesome类添加到i元素以将其转换为图标，例如：
+<i class="fa fa-info-circle"></i>  <i></i>是图片倾斜的标签
+<i class="fa fa-thumbs-up">       good
+<i class="fa fa-info-circle">Info</i>      info
+<i class="fa fa-trash">                 trash
+<i class="fa fa-paper-plane"></i>   plane
+9.使用Form Controls设置输入框样式
+表单控件加上类form-control后，效果为：
+宽度为100%
+设置边框为浅灰色
+控件具有4px的圆角
+设置阴影效果，元素得到焦点时，阴影和边框效果会发生变化
+设置placeholder的颜色为#999
+10.添加Bootstrap well容器
+Bootstrap 有一个well属性,它能是你创建的列有一种视觉深度的层次感。
+11.Bootstrap 还有一种 button 的 class 属性: btn-default 。 默认按钮颜色   白色
+
+12.JQ
+<script>
+    $(document).ready(function() {});
+        </script>
+13.让所有的button元素有弹回效果，只要把这段代码写在document ready function里面就可以了：
+$("button").addClass("animated bounce");
+14 注意，像使用CSS声明一样，你需要在class的名称前面添加一个.
+$(".well").addClass("animated shake");
+15.使用jQuery选择器操作同一元素
+现在你已经了解了三种获取元素的方式：type选择器$("button")、class选择器$(".btn")、id选择器$("#target1")。
+16.使用jQuery删除HTML元素的class
+你可以通过jQuery的addClass()方法给元素添加class，同样的，也可以通过jQuery的removeClass()方法删除元素的class。
+以下是对button元素执行的操作：
+$("#target2").removeClass("btn-default");
+17.使用jQuery改变HTML元素的CSS样式
+这跟一般的CSS语法有点不同，因为这里的CSS属性和值是在引号内的，并且用逗号分开，而不是冒号。
+以下代码显示如何将颜色改变成蓝色：
+$("#target1").css("color", "blue");
+18.使用jQuery设置元素不可用
+jQuery有一个.prop()的方法，可以让你来调整元素的属性。
+以下代码显示如何禁用所有按钮：
+$("button").prop("disabled", true);
+19.使用jQuery删除一个HTML元素
+jQuery 有一个.remove()的方法，可以彻底删除一个HTML元素。
+$("#target4").remove()；
+20.jQuery使用appendTo()移动HTML元素
+现在让我们尝试把元素从一个div里移动到另外一个div里。
+jQuery有一个appendTo()方法，可以让你把选中的HTML元素附加到其他元素中。
+比如，我们想让target4从right-well移动到left-well，我们用以下代码：
+$("#target4").appendTo("#left-well");
+21.jQuery使用clone()方法复制元素
+除了移动元素，你还可以将元素从一个地方复制到另一个地方。
+jQuery有一个clone()方法，可以复制元素。
+$("#target2").clone().appendTo("#right-well");
+你有没有注意到上面是将两个jQuery方法合在一起使用了？这种叫方法链function chaining，它是jQuery的一种便捷方式。
+22.jQuery使用parent()操作父级元素
+每个HTML元素都有一个parent元素，并从中继承属性。 	
+以下例子显示如何使用parent()设定left-well元素的父元素的背景色为蓝色：
+$("#left-well").parent().css("background-color", "blue")；
+23.jQuery使用children()操作子级元素
+jQuery有一个children()方法，可以让你访问选定元素的子元素。
+以下例子显示如何使用children()方法设置left-well元素的子元素的文本颜色为蓝色：
+$("#left-well").children().css("color", "blue")；
+24.jQuery使用target:nth-child(n) CSS选择器获取子元素
+jQuery用CSS选择器来获取元素，target:nth-child(n)CSS选择器允许你通过目标类或元素类型选择目标元素的所有子元素。
+以下代码显示如何给jQuery Playground中的每个井中（left well和right well）的第三个子元素添加bounce类：
+$(".target:nth-child(3)").addClass("animated bounce");
+25.jQuery使用选择器操作偶数索引元素
+以下代码显示如何通过targetclass获取所有奇数元素，并给它们添加class：
+$(".target:odd").addClass("animated shake");
+奇数 odd
+偶数 even
+26.使用jQuery修改整个页面
+jQuery也可以获取body元素。
+以下代码显示如何让整个body有淡出效果：
+$("body").addClass("animated fadeOut");
+以下代码显示如何让整个body有转动效果：
+$("body").addClass("animated hinge");
+

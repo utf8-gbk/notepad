@@ -1,0 +1,4 @@
+body 100% relative  html 100%;
+html 100%;
+background-size:100%,100%;
+box-sizing: border-box;

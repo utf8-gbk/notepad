@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>第一个简单的jQuery程序</title>
+    <style type="text/css">
+        div{
+            padding:8px 0px;
+            font-size:12px;
+            text-align:center;
+            border:solid 1px #888;
+        }
+    </style>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+//       	var $c = $('div');
+//      	$c.html("dfdfdfd");
+
+
+			 var $c = $('div');
+//			var c = $c.get(0);
+			var c = $c[0];
+			c.innerHTML="dfdfdfdf";
+			
+			})
+        
+//			 window.onload = function()
+//			 {
+//			 	var p = document.getElementById('c');
+//			 	console.log(p);
+//			 	p.innerHTML="dfdfdfdf";
+//			 	p.style.color = 'red';
+
+//
+//			 	var p = document.getElementById('c');
+//				var $p = $(p);
+//				$p.html("dfdfdf");
+//			 }
+    </script>
+</head>
+<body>
+    <div id="c"></div>
+</body>
+</html>

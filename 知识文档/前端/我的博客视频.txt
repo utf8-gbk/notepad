@@ -1,0 +1,8 @@
+tab. 
+块级元素默认高度
+padding 对div的位置
+margin div对外的位置
+line-block 内联但是有block的高度与宽度
+inherit  继承必须父元素有该继承的元素
+relative 相对与自身
+absolution 相对于父级absolution 或 父级relative

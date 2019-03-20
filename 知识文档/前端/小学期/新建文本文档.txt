@@ -1,0 +1,766 @@
+html
+
+window.onload=function()
+{
+	(function list(){
+	var in0 = document.getElementById('input');
+    var in1 = document.getElementById('input1');
+    var in2 = document.getElementById('input2');
+    var in3 = document.getElementById('input3');
+    var in4 = document.getElementById('input4');
+    var in5 = document.getElementById('input5');
+    console.log(in0);
+    console.log(in1);
+    console.log(in2);
+    console.log(in3);
+    var in0className = in0.className;
+	var in1className = in1.className;
+	var in2className = in2.className;
+	var in3className = in3.className;
+	var in4className = in4.className;
+	var in5className = in5.className;
+    
+	in0.onclick=over0;
+	in1.onclick=over1;
+	in2.onclick=over2;
+	in3.onclick=over3;
+	in4.onclick=over4;
+	in5.onclick=over5;
+	
+	in0.onmouseout = out0;
+    in1.onmouseout = out1;
+    in2.onmouseout = out2;
+    in3.onmouseout = out3;
+    in4.onmouseout = out4;
+    in5.onmouseout = out5;
+	function over0()
+	{
+		in0.className = in0className+' active';
+	}
+	function out0()
+	{
+		in0.className = in0className;
+	}
+	
+	function over1()
+	{
+		in1.className = in1className+' active1';
+	}
+	function out1()
+	{
+		in1.className = in1className;
+	}
+	
+	function over2()
+	{
+		in2.className = in2className+' active2';
+	}
+	
+	function out2()
+	{
+		in2.className = in2className;
+	}
+	
+	function over3()
+	{
+		in3.className = in3className+' active2';
+	}
+	function out3()
+	{
+		in3.className = in3className;
+	}
+	
+	function over4()
+	{
+		in4.className = in4className+' active2';
+	}
+	function out4()
+	{
+		in4.className = in4className;
+	}
+	
+	function over5()
+	{
+		in5.className = in5className+' active5';
+	}
+	function out5()
+	{
+		in5.className = in5className;
+	}
+	}());
+	
+	
+	$('#input').click(function(){
+		layer.open({
+			type:1,
+			area:["509px","450px"],
+			skin:"myskin",
+			content:`<div class="layer">
+			<div class="subject">
+				<span>请选择要创建题库的科目</span>
+			</div>
+			<div class='select'>
+				<div id="select_r" class="select_r">
+					<div class="select_r_d"><p>></p></div>
+				</div>
+				<div id="select_option" class="select_option">
+					<ul>
+						<li>高数</li>
+						<li>物理</li>
+						<li>英语</li>
+					</ul>
+				</div>
+			</div>
+			<div class="end">
+				<div class="right"></div>
+				<div class="no"></div>
+			</div>
+		</div>`
+		});
+	var selectRight = document.getElementById('select_r');
+	var selectOption = document.getElementById('select_option');
+	console.log(selectRight);
+	selectRight.onmouseover = over;
+	selectRight.onmouseout = out;
+	selectOption.onmouseover = over;
+	selectOption.onmouseout = out;
+	function over()
+	{
+		selectOption.style.display='block';
+		selectOption.style.zIndex=9999;
+	}
+	function out()
+	{
+		selectOption.style.display='none';
+	}
+	})
+}
+
+
+
+
+
+css
+*
+{
+	padding:0px;
+	margin:0px;
+}
+li
+{
+	list-style:none;
+}
+a
+{
+	text-decoration: none;
+}
+p
+{
+	font-size:20px;
+}
+.all
+{
+	width:1642px;
+	height:1080px;
+	border:solid 2px black;
+}
+.list
+{
+	height:783px;
+	width:1443px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+	position:relative;
+	border-radius: 2%;
+	margin-top:97px;
+	margin-left:97px;
+}
+.list .top
+{
+	height:117px;
+	width:auto;
+	position:relative;
+}
+
+.list .top span
+{
+	position:absolute;
+	top:48px;
+	left:72px;
+	font-family: MicrosoftYaHei;
+	font-size:23px;
+}
+.list .top .input
+{
+	height:47px;
+	width:143px;
+	position:absolute;
+	top:36px;
+	right:179px;
+	background-image: url(../img/create.png);
+    background-repeat:no-repeat;
+    background-color:transparent;
+    border:none;
+}
+.list .top input:focus
+{
+	outline:none;
+}
+.list .footer
+{
+	height:121px;
+	width:auto;
+	position:relative;
+}
+
+.list .footer .input1
+{
+	height:47px;
+	width:103px;
+	position:absolute;
+	left:458px;
+	bottom:38px;
+    background-image: url(../img/last.png);
+    background-repeat:no-repeat;
+    background-color:transparent;
+    border:none;
+}
+.list .footer .input1:focus
+{
+	outline:none;
+}
+.list .footer .input2
+{
+	height:47px;
+	width:47px;
+	position:absolute;
+	left:602px;
+	bottom:38px;
+	background-image: url(../img/pagenumber.png);
+    background-repeat:no-repeat;
+    background-color:transparent;
+    border:none;
+    color:white;
+}
+.list .footer .input2:focus
+{
+	outline:none;
+}
+.list .footer .input3
+{
+	height:47px;
+	width:47px;
+	position:absolute;
+	left:698px;
+	bottom:38px;
+	background-image: url(../img/pagenumber.png);
+    background-repeat:no-repeat;
+    background-color:transparent;
+    border:none;
+    color:white;
+}
+.list .footer .input3:focus
+{
+	outline:none;
+}
+.list .footer .input4
+{
+	height:47px;
+	width:47px;
+	position:absolute;
+	left:794px;
+	bottom:38px;
+	background-image: url(../img/pagenumber.png);
+    background-repeat:no-repeat;
+    background-color:transparent;
+    border:none;
+    color:white;
+}
+.list .footer .input4:focus
+{
+	outline:none;
+}
+.list .footer .input5
+{
+	height:47px;
+	width:103px;
+	position:absolute;
+	left:890px;
+	bottom:38px;
+	background-image: url(../img/next.png);
+    background-repeat:no-repeat;
+    background-color:transparent;
+    border:none;
+}
+.list .footer .input5:focus
+{
+	outline:none;
+}
+.list .main_t
+{
+	height:239px;
+	width:auto;
+}
+
+.list .main_t .math
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:117px;
+	left:179px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.list .main_t .math .math_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+.list .main_t .analysis
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:117px;
+	left:467px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.list .main_t .analysis .analysis_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+.list .main_t .system
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:117px;
+	left:755px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+	
+}
+
+.list .main_t .system .system_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+.list .main_t .english
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:117px;
+	left:1043px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+.list .main_t .english .english_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+.list .main_b
+{
+	height:239px;
+	width:autopx;
+	margin-top:67px;
+}
+
+
+.list .main_b .physical
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:423px;
+	left:179px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.list .main_b .physical .physical_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+.list .main_b .network
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:423px;
+	left:467px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.list .main_b .network .network_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+
+.list .main_b .concept
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:423px;
+	left:755px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+.list .main_b .concept .concept_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+
+
+.list .main_b .linux
+{
+	width:221px;
+	height:239px;
+	position:absolute;
+	top:423px;
+	left:1043px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+}
+.list .main_b .linux .linux_p
+{
+	width:221px;
+	height:145px;
+	background-color:RGB(208,208,208);
+}
+.list .top .active
+{
+	background-image: url(../img/createxuan.png);
+	background-repeat:no-repeat;
+}
+.list .footer .active1
+{
+	background-image: url(../img/lastxuan.png);
+	background-repeat:no-repeat;
+	
+}
+.list .footer .active2
+{
+	background-image: url(../img/pagenumberxuan.png);
+	background-repeat:no-repeat;
+	
+}
+.list .footer .active5
+{
+	background-image: url(../img/nextxuan.png);
+	background-repeat:no-repeat;
+}
+.trash
+{
+	height:21px;
+	width:19px;
+	background-image:url(../img/wastebin.png);
+	position:absolute;
+	left:194px;
+	bottom:212px;
+	
+}
+.layer
+{
+	height:403px;
+	width:509px;
+
+	position:relative;
+	
+}
+.layer .subject
+{
+	height:24px;
+	width:263px;
+	position:absolute;
+	top:66px;
+	left:123px;
+	font-size:23px;
+	
+}
+.layer .end
+{
+	height:47px;
+	width:100%;
+	position:absolute;
+	bottom:60px;
+	left:0px;
+}
+.layer .end .right
+{
+	height:47px;
+	width:92px;
+	position:absolute;
+	top:0px;
+	left:118px;
+	background-image: url(../img/enter.png);
+	background-repeat: no-repeat;
+}
+.layer .end .no
+{
+	height:47px;
+	width:92px;
+	position:absolute;
+	top:0px;
+	right:109px;
+	background-image: url(../img/cancel.png);
+	background-repeat:no-repeat;
+}
+.layer .select
+{
+	height:41px;
+	width:221px;
+	position:absolute;
+	top:128px;
+	left:144px;
+	border:solid 1px RGB(208,208,208);
+}
+.layer .select .select_r
+{
+	height:41px;
+	width:30px;
+	float:right;
+    background-color: RGB(210,210,209);
+}
+.layer .select .select_r .select_r_d
+{
+	height:20px;
+	width:13px;
+	transform:rotate(90deg);
+    margin-left:14px;
+    margin-top:11px;
+
+}
+.layer .select .select_option
+{
+	height:150px;
+	width:221px;
+	border:#1E9FFF solid 1px;
+	position:absolute;
+	top:41px;
+	left:0px;
+	display: none;
+
+}
+.layer .select .select_option ul
+{
+		height:150px;
+	    width:221px;
+}
+.layer .select .select_option ul li
+{
+	height:30px;
+	width:100%;
+    line-height: 30px;
+    text-align: center;
+    margin-top:10px;
+}
+body .myskin .layui-layer-title
+{
+	background-color:RGB(189,230,250);
+}
+
+
+
+
+.create
+{
+	height:256px;
+	width:509px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+	position:relative;
+}
+.create .create_t
+{
+	height:24px;
+	width:206px;
+	position:absolute;
+    top:87px;
+    left:152px;
+	
+}
+.create .create_b
+{
+	height:47px;
+	width:100%;
+	position:absolute;
+	bottom:23px;
+
+}
+.create .create_b .create_b_l
+{
+	height:47px;
+	width:92px;
+	position:absolute;
+	left:105px;
+	background-image: url(../img/enter.png);
+	background-repeat: no-repeat;
+}
+.create .create_b .create_b_r
+{
+	height:47px;
+	width:92px;
+	position:absolute;
+	right:109px;
+	background-image: url(../img/cancel.png);
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+
+js
+
+window.onload=function()
+{
+	(function list(){
+	var in0 = document.getElementById('input');
+    var in1 = document.getElementById('input1');
+    var in2 = document.getElementById('input2');
+    var in3 = document.getElementById('input3');
+    var in4 = document.getElementById('input4');
+    var in5 = document.getElementById('input5');
+    console.log(in0);
+    console.log(in1);
+    console.log(in2);
+    console.log(in3);
+    var in0className = in0.className;
+	var in1className = in1.className;
+	var in2className = in2.className;
+	var in3className = in3.className;
+	var in4className = in4.className;
+	var in5className = in5.className;
+    
+	in0.onclick=over0;
+	in1.onclick=over1;
+	in2.onclick=over2;
+	in3.onclick=over3;
+	in4.onclick=over4;
+	in5.onclick=over5;
+	
+	in0.onmouseout = out0;
+    in1.onmouseout = out1;
+    in2.onmouseout = out2;
+    in3.onmouseout = out3;
+    in4.onmouseout = out4;
+    in5.onmouseout = out5;
+	function over0()
+	{
+		in0.className = in0className+' active';
+	}
+	function out0()
+	{
+		in0.className = in0className;
+	}
+	
+	function over1()
+	{
+		in1.className = in1className+' active1';
+	}
+	function out1()
+	{
+		in1.className = in1className;
+	}
+	
+	function over2()
+	{
+		in2.className = in2className+' active2';
+	}
+	
+	function out2()
+	{
+		in2.className = in2className;
+	}
+	
+	function over3()
+	{
+		in3.className = in3className+' active2';
+	}
+	function out3()
+	{
+		in3.className = in3className;
+	}
+	
+	function over4()
+	{
+		in4.className = in4className+' active2';
+	}
+	function out4()
+	{
+		in4.className = in4className;
+	}
+	
+	function over5()
+	{
+		in5.className = in5className+' active5';
+	}
+	function out5()
+	{
+		in5.className = in5className;
+	}
+	}());
+	
+	
+	$('#input').click(function(){
+		layer.open({
+			type:1,
+			area:["509px","450px"],
+			skin:"myskin",
+			content:`<div class="layer">
+			<div class="subject">
+				<span>请选择要创建题库的科目</span>
+			</div>
+			<div class='select'>
+				<div id="select_r" class="select_r">
+					<div class="select_r_d"><p>></p></div>
+				</div>
+				<div id="select_option" class="select_option">
+					<ul>
+						<li>高数</li>
+						<li>物理</li>
+						<li>英语</li>
+					</ul>
+				</div>
+			</div>
+			<div class="end">
+				<div class="right"></div>
+				<div class="no"></div>
+			</div>
+		</div>`
+		});
+	var selectRight = document.getElementById('select_r');
+	var selectOption = document.getElementById('select_option');
+	console.log(selectRight);
+	selectRight.onmouseover = over;
+	selectRight.onmouseout = out;
+	selectOption.onmouseover = over;
+	selectOption.onmouseout = out;
+	function over()
+	{
+		selectOption.style.display='block';
+		selectOption.style.zIndex=9999;
+	}
+	function out()
+	{
+		selectOption.style.display='none';
+	}
+	})
+}

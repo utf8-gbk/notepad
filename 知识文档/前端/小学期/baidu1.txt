@@ -1,0 +1,24 @@
+1.ul
+position:absolute;
+margin
+padding
+2.a
+设置margin-left
+3重点position 加 空格
+4.postion是先找位置再浮动
+5.a标签不空格设置后面a为position（变为块级元素）
+不会被挤下去 如果有空格就会被挤下去（就像英语单词一样）
+6.body,html
+{
+	height:100%;
+	min-width:810px;
+	min-height:600px;
+	position:relative;
+}
+7.input放在div中与button结合
+8.div可以超出父级div显示
+9.居中 边距 text-align:center margin-left:19px;
+10.p中不能放div否则提前结束
+11.用来定位的div不用设置宽高 里面div可以撑开
+12.内部行内元素居中text-align:center
+    自身块级元素在父级中居中 margin:0 auto;

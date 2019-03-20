@@ -1,0 +1,15 @@
+css渲染 从小到大 如div#content body html
+检查错误 删除html中的节点 对比发
+有些js代码写的样式会瞬间即逝 右键点住在查看
+
+共同的class使用 额外添加用id +消除浮动伪类
+.w1150 {
+    width: 1150px;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+}
+
+三角形遮罩层导航
+回到顶部图标
+

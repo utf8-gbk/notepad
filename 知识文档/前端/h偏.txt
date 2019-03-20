@@ -1,0 +1,39 @@
+<code>计算机输出</code>
+<br />
+<kbd>键盘输入</kbd>
+<br />
+<tt>打字机文本</tt>
+<br />
+<samp>计算机代码样本</samp>
+<br />
+<var>计算机变量</var>
+<br />
+<p>
+<b>注释：</b>这些标签常用于显示计算机/编程代码。
+</p>
+
+<address>
+Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+地址
+
+
+<abbr title="etcetera">etc.</abbr>
+<br />
+<acronym title="World Wide Web">WWW</acronym>
+<p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+
+<p>
+这是一个电子邮件链接：
+<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+发送邮件</a>
+</p> 跳出框架 发送电子邮件
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);

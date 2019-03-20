@@ -1,0 +1,44 @@
+class  定义一个类名
+id       定义唯一id
+style   行内样式
+title    额外信息
+<br/> 换行
+<hr/> 水平线
+<pre> 预格式文本 对空行和空格进行控制
+<a href="http://www.runoob.com/" target="_blank">访问菜鸟教程!</a>
+<p>如果你将 target 属性设置为 &quot;_blank&quot;, 链接将在新窗  默认的
+如果target =_self 在自己窗口打开
+<h2><a id="C4">章节 4</a></h2>
+<a href="#C4">查看章节 4</a>  使用id使当前页面连接到指定的位置
+<style type="text/css">
+h1 {color:red;}
+p {color:blue;}
+</style>
+font-family（字体），color（颜色），和font-size（字体大小）
+创建图像映射
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+</map>
+<table border="1">
+  <caption>Monthly savings</caption> 带有标题的表格
+<table border="1" 
+cellpadding="10"> 表格的边距
+<ol start="50">有序列表开始序号
+<h1 style="margin-bottom:0;">主要的网页标题</h1> 距离下面为0
+ colspan="2"跨行的意思2行
+
+<form action="">
+Username: <input type="text" name="user"><br>
+Password: <input type="password" name="password">
+</form>表单
+<iframe src="demo_iframe.htm" width="200" height="200" frameborder="0">
+ <p>您的浏览器不支持  iframe 标签。</p>
+</iframe>
+框架
+ 
+
+
+

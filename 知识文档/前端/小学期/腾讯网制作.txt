@@ -1,0 +1,7 @@
+1.margin:0 auto; 居中
+2.overflow：hidden;多余隐藏
+3.<span></span> <a></a> 行类元素
+4.<li>标签行着排列 display:inline-block;
+
+
+

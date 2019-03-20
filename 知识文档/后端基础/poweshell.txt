@@ -1,0 +1,10 @@
+1. md 创建文件夹 rd 删除文件夹
+2.cd 进入
+3. ni server.html 创建文件
+4.explore . 打开当前文件夹
+5.在当前目录 输入想要打开文件的首字母按Tab键 
+6.npm i -g http-server 搭建服务器
+7.查看搭建的服务可以全局查看(设置了-g) hs
+8.退出服务 control c
+9.递归创建文件夹 md (-p) a/b/c   递归删除文件 rd (-r) a/b/c
+10.      /代表当前目录

@@ -1,0 +1,16 @@
+1.引入jq的库
+2. $(document).ready(function() {
+                $("div").html("您好！通过慕课网学习jQuery才是最佳的途径。");
+            });
+$(document).ready 的作用是等页面的文档中的节点都加载完毕后，在执行后续代码
+3.
+jQuery对象与DOM对象
+jQuery是一个类数组对象，而DOM对象就是一个单独的DOM元素。
+https://www.imooc.com/code/8108
+4.
+jQuery对象转化成DOM对象
+方式一：利用数组下标的方式读取到jQuery中的DOM对象
+方式二：通过jQuery自带的get()方法
+https://www.imooc.com/code/8109
+5.DOM对象转化成jQuery对象
+var $div = $(div); //jQuery对象

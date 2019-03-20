@@ -1,0 +1,253 @@
+1.let变量块级作用域
+它的子级可以访问
+块级内有个a外部也有个a使外部的a失效
+let没有提升的功能
+一个作用域内不能被重复声明包括 let const var
+代替立即执行匿名函数 防止泄露
+es6函数不被提升
+闭包中for（var i = 5) 把var i改为let i就可以逐步打印了
+const和let使用一样 除了const的值所指的内存地址不能被修改
+
+2.class
+get info()
+static
+changeName()
+
+super
+changeName()
+继承
+
+2 3 4 8 17 18 19 22 24 25-29 33 34
+
+3.promise
+去掉回调函数
+return new Promiese(function(resolve,reject){})
+resolve 正常执行结果
+reject 异常
+
+捕获异常的两种方式
+1.在之后.catch(function(error){})
+2.在then的第二个参数加入一个函数
+
+then resolve 执行后return任意值都会被封装成Promise对象
+Promise.all 返回数组
+Promise.race 返回最先执行的数
+
+set
+let st = new Set(arr);
+没有重复的值
+st.add
+st.delete
+st.has
+st.clear();清空
+st.size;
+
+Array.from(new Set(arr)); 使类数组的数据结构变成数组
+Object.is(NaN,v) 判断数据的类型
+isNaN(NaN,v) 判断数据的类型
+arr.findIndex(function(value,index,arr)
+
+箭头函数
+function(){} = ()=>{}
+this指向特定 可以想成bind绑定
+不能使用argument
+不能使用构造器new
+ 
+map
+一般对象的key值只能是字符串
+map的key值都可以是
+
+let map = new Map();
+map.set(obj,"very good")
+let v = map.get(obj);
+map.delete(obj);
+map.size();
+map.has(obj);
+在set和get内部算法认为NaN===NaN
+map.clear() 彻底清空
+
+set
+set和数组的唯一的区别值是唯一的，不能重复
+let arr = [1,2,3,'5','5']
+let st = new Set(arr);
+st.add({name:'leo',qq:'232323'})
+st.delete(user);
+st.size
+st.has
+st.clear();
+
+Array.from(new Set(arr)) 使类数组的数据结构变为数组
+
+Set.prototype[Symbol.iterator]===Set.prototype.values;
+
+set遍历的几种方式
+let keysI = st.keys();
+for(let k of keysI）
+set中的key和value是一样的
+let valuesI = st.values();
+for(let v of valueI)
+let entriesI = st.entries();
+for(let o of entriesI)
+keys 和 values的结合
+
+直接使用
+let aaa = new Set([1,2,3])
+for(let m of aaa)
+{
+    console.log(m)
+}相当于第二种values的遍历
+for(let m of aaa)
+{
+    console.log(m)
+}
+
+set中NaN === NaN
+
+symbol是一个数据类型独一无二的
+symbol.for 相当于普通变量
+symbol.keyfor
+f:function(){} 函数的简写 f(){};
+module.exports = class User 模块化 导出一个模块在另一个地方引用
+遍历的方法
+Object.getOwnPropertyNames(obj)
+let key = Object.getOwnPropertyNames(obj)[0]
+
+Symbol.iterator 数组有这个属性
+var iterator = arr[Symbol.iterator]();调用这个方法会返回一个指针对象
+对象中有next（）方法
+{value：'a',done:false} done判断遍历是否完成
+只要一个对象中具有iterator这个方法就可以被for of 遍历
+没有iterator方法可以自己定义一个也可以借助数组
+obj[Symbol.iterator] = [][Symbol.iterator];
+在es6中数组 set map 字符串都可以实现iterator接口
+
+generator
+function *fn(){}
+yield只能存在于generator函数
+yied 可以使next() 不一次执行完
+默认yield始终返回undefined
+yield在表达式中使用要（）
+想要yiled返回值用next赋值
+
+Array.form 
+有length属性就可以不用写length obj中没有length就要写
+Array.of 通过多个参数 生成 数组
+let a= Array.of(12)
+[].copyWidthin(target,start,end)通过自身数据 在指定位置 替换 数据  
+[].fill(10，2，5);填充 10 填充 2，5填充范围
+arr.find(function(){})
+找到一个true的值
+arr.findIndex 
+返回的是索引
+NaN===NaN false
+Object.is(NaN,NaN) isNaN(NaN)
+
+对象属性的新写法
+f:function(){} => f(){}
+obj['myid'+ok] = 'oo7'写外面 => var obj = { ['myid'+ok] :'oo7'}写里面
+exports.obj =obj;
+module.exports ={obj,obj2}
+
+Object.is(NaN,NaN)true NaN===NaN false
+Object.is(+0,-0) false +0 === -0 false
+ 
+var obj = Object.assign({},{name:'leo'});
+第一个参数是obj
+var potions = Object.assign({},DEFAULT_OPTIONS,options);
+没有传入参数就默认DEFAULT_OPTIONS
+
+遍历对象属性
+1.Object.keys 能够得到自身的可枚举的属性，但得不到原型链上的属性，得不到Symbols属性
+2.Object.getOwnPropertyNames 能够得到自身属性，包括不可枚举属性，但得不到原型链上的属性，得不到Symbols属性
+3.Object.getOwnPropertySymbols 可以得到自身Symbols属性，包括不可枚举的属性
+4.for（let k in b)可以得到自身属性和原型链上的属性 必须可枚举
+
+user._proto_ =  p 不规范
+Object.setPrototypeOf(user,p); 改变user的_proto_为p 
+var proto = Object.getpPrototypeOf(user); 获取user的_proto_
+proto = user._proto
+
+var str = '你好啊';
+str.indexof('好');
+str.includes('啊',2);//true
+str.startsWith('好',1);//true
+str.endsWith('你好',2);//true
+str.repeat(4)
+
+模板字符串
+let html2 = `${}`;
+要引用外来的变量就要使用'${}'
+可以加入函数
+可以加入变量
+
+标签模板
+function safe(strArr,arg)
+第1个参数是字符串数组
+第2个参数是${}
+var result = tag`hello ${name}`;
+
+箭头函数
+var fn = function(name){};
+var fn2 = (name)=>{}
+一个形参
+var fn3 = n=>{}
+this 的用法
+1this 是不可变的，被绑定的
+2没有argument的属性
+3var fn2 = n=>n*2;
+  var fn2 = n=>{return n*2};
+
+变量的数组结构赋值
+1.多维数组结构解析
+let arr =[22,[3,4],3]
+let [a,[b,c],d] = arr;
+
+2.变量的交换
+[x,y] = [y,x]
+
+3.不完全解析
+
+4.不能被数组解析的值
+let [x,y] = NaN;//undefined,null,{}
+
+5.Set解析赋值
+let [x,y] = new Set([22,33])
+
+6.所有实现了Iterator的数据结构都能被解析
+含有iterator
+
+7...运算符 转换成数组
+var [x,...y] = [1,2,3,4,5,6];
+y = [2,3,4,5,6];
+
+
+变量的对象解构赋值
+var {name:name2} ={name:'leo',age:33};
+console.log(name);
+var {name} = {name:'leo',age:33};
+console.log(name);
+
+let obj ={a:{b:{c:123}}};
+let {a:{b:{c}}} = obj;
+a,b是模式 c是变量
+区别
+let {a:{b} = obj 继续解析b为变量
+let {a:b} = obj  不继续解析，b为变量
+
+默认值
+let [x=15,y] = [undefined,12] 除了undefined之外其他都会被赋值
+
+错误异常
+let{x:{y}} = {name:{y:23}}
+x 不等于 name
+
+函数模块化
+export var name = 'leo';
+import {name} from './m1'
+name 不能被重新赋值
+变量跟随模块变化
+重命名 name as myname
+
+同一暴露
+export{name,User,changeName};
+通过default 输出的是一个值而不是一个引用
